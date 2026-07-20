@@ -9,8 +9,10 @@ Personal catalogue for **CHEN PEIYU** (`gumpcpy`).
 | Path | Purpose |
 |------|---------|
 | `index.html` | Catalogue shell |
-| `app.js` | Renders pillars/cards from JSON |
+| `app.js` | Renders pillars/cards/certificates from JSON |
 | `data/projects.json` | **Add / update works here** |
+| `data/learning.json` | **Coursera certificates / learning journey** |
+| `assets/coursera/` | Certificate & org images |
 | `styles.css` | Visual system |
 
 ## Add a project

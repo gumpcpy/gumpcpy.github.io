@@ -1,5 +1,6 @@
 const LANG_KEY = "catalogue-lang";
 const SUPPORTED = ["zh", "en"];
+const ASSET_VERSION = "20260720e";
 
 const UI = {
   zh: {
@@ -8,8 +9,11 @@ const UI = {
     github: "GitHub",
     learningNav: "學習軌跡",
     learningTitle: "學習軌跡",
-    learningLead: "學習軌跡與證書——目前仍放在既有 portfolio 頁，之後可遷入本站。",
-    learningCta: "Coursera 與學習旅程 →",
+    learningLead: "Coursera 學習軌跡與證書——課程、機構與驗證連結。",
+    viewCertificate: "查看證書 →",
+    gradeLabel: "成績",
+    expandLearning: (n) => `展開 ${n} 張證書`,
+    collapseLearning: "收合證書",
     footerNote: "個人作品目錄 · 持續新增",
     catalogueTitle: "作品目錄",
     status: { live: "上線", wip: "進行中", coming: "即將上架" },
@@ -25,8 +29,11 @@ const UI = {
     learningNav: "Learning",
     learningTitle: "Learning",
     learningLead:
-      "Learning journey and certificates—still on the existing portfolio page for now; may move here later.",
-    learningCta: "Coursera & learning journey →",
+      "Coursera learning journey and certificates—courses, institutions, and verification links.",
+    viewCertificate: "View certificate →",
+    gradeLabel: "Grade",
+    expandLearning: (n) => `Show ${n} certificates`,
+    collapseLearning: "Hide certificates",
     footerNote: "Personal catalogue · works added over time",
     catalogueTitle: "Catalogue",
     status: { live: "Live", wip: "WIP", coming: "Coming" },
@@ -37,10 +44,10 @@ const UI = {
   },
 };
 
-const ASSET_VERSION = "20260720c";
-
 let lang = "zh";
 let catalogueData = null;
+let learningData = null;
+let learningExpanded = false;
 
 /** Resolve bilingual field `{ zh, en }` or plain string. Never returns an object. */
 function t(value) {
@@ -77,10 +84,13 @@ function el(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
   if (text != null) {
-    // Guard against accidentally assigning translation objects.
     node.textContent = typeof text === "string" ? text : t(text);
   }
   return node;
+}
+
+function assetUrl(file) {
+  return `./assets/coursera/${file}?v=${ASSET_VERSION}`;
 }
 
 function renderNav(pillars) {
@@ -167,13 +177,103 @@ function renderPillars(data) {
   }
 }
 
+function renderCertificate(cert) {
+  const article = el("article", "cert");
+
+  const body = el("div", "cert-body");
+
+  const orgRow = el("div", "cert-org");
+  if (cert.orgLogo) {
+    const logo = document.createElement("img");
+    logo.className = "cert-org-logo";
+    logo.src = assetUrl(cert.orgLogo);
+    logo.alt = "";
+    logo.width = 36;
+    logo.height = 36;
+    orgRow.appendChild(logo);
+  }
+  orgRow.appendChild(el("p", "cert-org-name", t(cert.org)));
+  body.appendChild(orgRow);
+
+  body.appendChild(el("h3", null, t(cert.title)));
+
+  const meta = el("p", "cert-meta");
+  const parts = [t(cert.date), t(cert.hours)];
+  if (cert.grade) parts.push(`${ui("gradeLabel")}: ${cert.grade}`);
+  meta.textContent = parts.filter(Boolean).join(" · ");
+  body.appendChild(meta);
+
+  if (cert.url) {
+    const a = el("a", "cert-link", ui("viewCertificate"));
+    a.href = cert.url;
+    a.target = "_blank";
+    a.rel = "noopener";
+    body.appendChild(a);
+  }
+
+  article.appendChild(body);
+
+  if (cert.image) {
+    const media = el("div", "cert-media");
+    const img = document.createElement("img");
+    img.src = assetUrl(cert.image);
+    img.alt = t(cert.title);
+    img.loading = "lazy";
+    media.appendChild(img);
+    article.appendChild(media);
+  }
+
+  return article;
+}
+
+function updateLearningToggle(count) {
+  const btn = document.getElementById("learning-toggle");
+  const list = document.getElementById("learning-list");
+  const section = document.getElementById("learning");
+  if (!btn || !list) return;
+
+  const label = learningExpanded
+    ? ui("collapseLearning")
+    : ui("expandLearning")(count);
+
+  btn.textContent = label;
+  btn.setAttribute("aria-expanded", String(learningExpanded));
+  list.hidden = !learningExpanded;
+  section?.classList.toggle("is-expanded", learningExpanded);
+}
+
+function renderLearning(data) {
+  const list = document.getElementById("learning-list");
+  if (!list) return;
+
+  const lead = document.getElementById("learning-lead");
+  if (lead) lead.textContent = t(data.lead) || ui("learningLead");
+
+  const certs = data.certificates || [];
+  list.replaceChildren();
+  for (const cert of certs) {
+    list.appendChild(renderCertificate(cert));
+  }
+  updateLearningToggle(certs.length);
+}
+
+function bindLearningToggle() {
+  const btn = document.getElementById("learning-toggle");
+  if (!btn || btn.dataset.bound) return;
+  btn.dataset.bound = "1";
+  btn.addEventListener("click", () => {
+    learningExpanded = !learningExpanded;
+    const count = learningData?.certificates?.length || 0;
+    updateLearningToggle(count);
+  });
+}
+
 function applyPerson(person) {
   const name = t(person.name);
   document.getElementById("person-name").textContent = name;
   document.getElementById("person-tagline").textContent = t(person.tagline);
   document.getElementById("person-about").textContent = t(person.about);
   document.getElementById("github-link").href = person.github;
-  document.getElementById("learning-link").href = person.learningUrl;
   const footerBrand = document.getElementById("footer-brand");
   if (footerBrand) footerBrand.textContent = name;
   document.title = `${name} — ${ui("catalogueTitle")}`;
@@ -197,12 +297,6 @@ function applyStaticUi() {
   const learningTitle = document.getElementById("learning-title");
   if (learningTitle) learningTitle.textContent = ui("learningTitle");
 
-  const learningLead = document.getElementById("learning-lead");
-  if (learningLead) learningLead.textContent = ui("learningLead");
-
-  const learningLink = document.getElementById("learning-link");
-  if (learningLink) learningLink.textContent = ui("learningCta");
-
   const footerNote = document.getElementById("footer-note");
   if (footerNote) footerNote.textContent = ui("footerNote");
 
@@ -215,10 +309,12 @@ function applyStaticUi() {
 
 function applyLanguage() {
   applyStaticUi();
-  if (!catalogueData) return;
-  applyPerson(catalogueData.person);
-  renderNav(catalogueData.pillars);
-  renderPillars(catalogueData);
+  if (catalogueData) {
+    applyPerson(catalogueData.person);
+    renderNav(catalogueData.pillars);
+    renderPillars(catalogueData);
+  }
+  if (learningData) renderLearning(learningData);
 }
 
 function bindLangToggle() {
@@ -230,11 +326,19 @@ function bindLangToggle() {
 async function boot() {
   lang = detectLang();
   bindLangToggle();
+  bindLearningToggle();
   applyStaticUi();
 
-  const res = await fetch(`./data/projects.json?v=${ASSET_VERSION}`, { cache: "no-cache" });
-  if (!res.ok) throw new Error(`Failed to load projects.json (${res.status})`);
-  catalogueData = await res.json();
+  const [projectsRes, learningRes] = await Promise.all([
+    fetch(`./data/projects.json?v=${ASSET_VERSION}`, { cache: "no-cache" }),
+    fetch(`./data/learning.json?v=${ASSET_VERSION}`, { cache: "no-cache" }),
+  ]);
+
+  if (!projectsRes.ok) throw new Error(`Failed to load projects.json (${projectsRes.status})`);
+  if (!learningRes.ok) throw new Error(`Failed to load learning.json (${learningRes.status})`);
+
+  catalogueData = await projectsRes.json();
+  learningData = await learningRes.json();
   applyLanguage();
 }
 

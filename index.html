@@ -8,13 +8,14 @@
       name="description"
       content="CHEN PEIYU — film production workflows, immersive systems, and product engineering catalogue."
     />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260720c" />
+    <link rel="stylesheet" href="./styles.css?v=20260720e" />
   </head>
   <body>
     <div class="sky" aria-hidden="true"></div>
@@ -47,18 +48,18 @@
     <section class="section learning" id="learning">
       <h2 id="learning-title">學習軌跡</h2>
       <p class="section-lead" id="learning-lead">
-        學習軌跡與證書——目前仍放在既有 portfolio 頁，之後可遷入本站。
+        Coursera 學習軌跡與證書——課程、機構與驗證連結。
       </p>
-      <p>
-        <a
-          class="btn ghost"
-          id="learning-link"
-          href="https://gumpcpy.github.io/portfolio/"
-          target="_blank"
-          rel="noopener"
-          >Coursera 與學習旅程 →</a
-        >
-      </p>
+      <button
+        type="button"
+        class="btn ghost learning-toggle"
+        id="learning-toggle"
+        aria-expanded="false"
+        aria-controls="learning-list"
+      >
+        展開證書
+      </button>
+      <div class="cert-list" id="learning-list" hidden></div>
     </section>
 
     <footer class="footer">
@@ -66,6 +67,6 @@
       <p id="footer-note">個人作品目錄 · 持續新增</p>
     </footer>
 
-    <script src="./app.js?v=20260720c" type="module"></script>
+    <script src="./app.js?v=20260720e" type="module"></script>
   </body>
 </html>

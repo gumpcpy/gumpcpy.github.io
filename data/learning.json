@@ -1,0 +1,182 @@
+{
+  "lead": {
+    "zh": "Coursera 學習軌跡與證書——課程、機構與驗證連結。",
+    "en": "Coursera learning journey and certificates—courses, institutions, and verification links."
+  },
+  "certificates": [
+    {
+      "id": "project-initiation",
+      "title": "Project Initiation: Starting a Successful Project",
+      "org": "Google",
+      "orgLogo": "google.avif",
+      "date": {
+        "zh": "2025 年 8 月 1 日",
+        "en": "August 1, 2025"
+      },
+      "hours": {
+        "zh": "約 17 小時",
+        "en": "17 hours (approximately)"
+      },
+      "grade": "97.37%",
+      "image": "Project_Initiation.png",
+      "url": "https://www.coursera.org/account/accomplishments/verify/T1E702Y4PEL3"
+    },
+    {
+      "id": "foundations-of-project-management",
+      "title": "Foundations of Project Management",
+      "org": "Google",
+      "orgLogo": "google.avif",
+      "date": {
+        "zh": "2025 年 5 月 19 日",
+        "en": "May 19, 2025"
+      },
+      "hours": {
+        "zh": "約 12 小時",
+        "en": "12 hours (approximately)"
+      },
+      "grade": "94.60%",
+      "image": "foundations_of_project_management.jpg",
+      "url": "https://www.coursera.org/account/accomplishments/verify/XJ8J2MSBV6YV"
+    },
+    {
+      "id": "intro-data-science-python",
+      "title": "Introduction to Data Science in Python",
+      "org": {
+        "zh": "密西根大學",
+        "en": "University of Michigan"
+      },
+      "orgLogo": "michigan.avif",
+      "date": {
+        "zh": "2024 年 5 月 13 日",
+        "en": "May 13, 2024"
+      },
+      "hours": {
+        "zh": "約 34 小時",
+        "en": "34 hours (approximately)"
+      },
+      "grade": "94.75%",
+      "image": "introduction_to_data_science_in_python.jpg",
+      "url": "https://www.coursera.org/account/accomplishments/verify/7L6F274XBTND"
+    },
+    {
+      "id": "cluster-analysis",
+      "title": "Cluster Analysis in Data Mining",
+      "org": {
+        "zh": "伊利諾大學厄巴納－香檳分校",
+        "en": "University of Illinois Urbana-Champaign"
+      },
+      "orgLogo": "illinois.avif",
+      "date": {
+        "zh": "2022 年 7 月 14 日",
+        "en": "July 14, 2022"
+      },
+      "hours": {
+        "zh": "約 16 小時",
+        "en": "16 hours (approximately)"
+      },
+      "grade": "95.83%",
+      "image": "cluster_analysis_in_data_mining.jpg",
+      "url": "https://www.coursera.org/account/accomplishments/verify/HEY9CZKM6NED"
+    },
+    {
+      "id": "pattern-discovery",
+      "title": "Pattern Discovery in Data Mining",
+      "org": {
+        "zh": "伊利諾大學厄巴納－香檳分校",
+        "en": "University of Illinois Urbana-Champaign"
+      },
+      "orgLogo": "illinois.avif",
+      "date": {
+        "zh": "2022 年 6 月 15 日",
+        "en": "June 15, 2022"
+      },
+      "hours": {
+        "zh": "約 17 小時",
+        "en": "17 hours (approximately)"
+      },
+      "grade": "96%",
+      "image": "pattern_discovery_in_data_mining.jpg",
+      "url": "https://www.coursera.org/account/accomplishments/verify/VBKVXT3KEV54"
+    },
+    {
+      "id": "text-mining",
+      "title": "Text Mining and Analytics",
+      "org": {
+        "zh": "伊利諾大學厄巴納－香檳分校",
+        "en": "University of Illinois Urbana-Champaign"
+      },
+      "orgLogo": "illinois.avif",
+      "date": {
+        "zh": "2022 年 5 月 25 日",
+        "en": "May 25, 2022"
+      },
+      "hours": {
+        "zh": "約 33 小時",
+        "en": "33 hours (approximately)"
+      },
+      "grade": "95.80%",
+      "image": "text_mining_and_analytics.jpg",
+      "url": "https://www.coursera.org/account/accomplishments/verify/EU3S6382XMJQ"
+    },
+    {
+      "id": "text-retrieval",
+      "title": "Text Retrieval and Search Engines",
+      "org": {
+        "zh": "伊利諾大學厄巴納－香檳分校",
+        "en": "University of Illinois Urbana-Champaign"
+      },
+      "orgLogo": "illinois.avif",
+      "date": {
+        "zh": "2022 年 4 月 27 日",
+        "en": "April 27, 2022"
+      },
+      "hours": {
+        "zh": "約 30 小時",
+        "en": "30 hours (approximately)"
+      },
+      "grade": "98.50%",
+      "image": "text_retrieval_and_search_engines.jpg",
+      "url": "https://www.coursera.org/account/accomplishments/verify/B9BDEL6FRS3W"
+    },
+    {
+      "id": "data-visualization",
+      "title": "Data Visualization",
+      "org": {
+        "zh": "伊利諾大學厄巴納－香檳分校",
+        "en": "University of Illinois Urbana-Champaign"
+      },
+      "orgLogo": "illinois.avif",
+      "date": {
+        "zh": "2022 年 4 月 1 日",
+        "en": "April 1, 2022"
+      },
+      "hours": {
+        "zh": "約 15 小時",
+        "en": "15 hours (approximately)"
+      },
+      "grade": "90.83%",
+      "image": "data_visualization.jpg",
+      "url": "https://www.coursera.org/account/accomplishments/verify/EDMDJGCBJ56X"
+    },
+    {
+      "id": "machine-learning",
+      "title": "Machine Learning",
+      "org": {
+        "zh": "史丹佛大學",
+        "en": "Stanford University"
+      },
+      "orgLogo": "stanford.avif",
+      "date": {
+        "zh": "2022 年 3 月 19 日",
+        "en": "March 19, 2022"
+      },
+      "hours": {
+        "zh": "約 59 小時",
+        "en": "59 hours (approximately)"
+      },
+      "grade": "96.47%",
+      "image": "machine_learning.jpg",
+      "url": "https://www.coursera.org/account/accomplishments/verify/TY5HRU25VC72"
+    }
+  ]
+}
