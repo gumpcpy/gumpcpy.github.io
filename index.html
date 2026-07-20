@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CHEN PEIYU — Catalogue</title>
+    <title>CHEN PEIYU — 作品目錄</title>
     <meta
       name="description"
       content="CHEN PEIYU — film production workflows, immersive systems, and product engineering catalogue."
@@ -21,26 +21,32 @@
 
     <nav class="nav" aria-label="Primary">
       <a class="nav-brand" href="#top">gumpcpy</a>
-      <div class="nav-links" id="nav-links"></div>
+      <div class="nav-end">
+        <div class="nav-links" id="nav-links"></div>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
     </nav>
 
     <header class="hero" id="top">
-      <p class="eyebrow">Catalogue · Systems · Products</p>
+      <p class="eyebrow" id="eyebrow">作品目錄 · 系統 · 產品</p>
       <h1 class="brand" id="person-name">CHEN PEIYU</h1>
       <p class="tagline" id="person-tagline"></p>
       <p class="lede" id="person-about"></p>
       <div class="cta-row">
-        <a class="btn primary" href="#apps">View apps</a>
+        <a class="btn primary" id="cta-apps" href="#apps">查看 Apps</a>
         <a class="btn ghost" id="github-link" href="https://github.com/gumpcpy" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn ghost" href="#learning">Learning</a>
+        <a class="btn ghost" id="cta-learning" href="#learning">學習軌跡</a>
       </div>
     </header>
 
     <main id="catalogue"></main>
 
     <section class="section learning" id="learning">
-      <h2>Learning</h2>
-      <p class="section-lead">
+      <h2 id="learning-title">學習軌跡</h2>
+      <p class="section-lead" id="learning-lead">
         學習軌跡與證書——目前仍放在既有 portfolio 頁，之後可遷入本站。
       </p>
       <p>
@@ -50,14 +56,14 @@
           href="https://gumpcpy.github.io/portfolio/"
           target="_blank"
           rel="noopener"
-          >Coursera &amp; learning journey →</a
+          >Coursera 與學習旅程 →</a
         >
       </p>
     </section>
 
     <footer class="footer">
       <p class="brand-sm">CHEN PEIYU</p>
-      <p>Personal catalogue · works added over time</p>
+      <p id="footer-note">個人作品目錄 · 持續新增</p>
     </footer>
 
     <script src="./app.js" type="module"></script>

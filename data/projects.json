@@ -2,44 +2,95 @@
   "person": {
     "name": "CHEN PEIYU",
     "handle": "gumpcpy",
-    "tagline": "Film production workflows · Immersive systems · Product engineering",
-    "about": "Technical person from Taiwan, working in Beijing. 10+ years across film production and software engineering—focusing on production/post-production tooling, immersive interactive systems, and shipping end-to-end products.",
+    "tagline": {
+      "zh": "影視製作流程 · 沉浸式系統 · 產品工程",
+      "en": "Film production workflows · Immersive systems · Product engineering"
+    },
+    "about": {
+      "zh": "來自台灣、工作於北京的技術人。十餘年橫跨影視製作與軟體工程——專注製作／後製工具、沉浸式互動系統，以及端到端產品交付。",
+      "en": "Technical person from Taiwan, working in Beijing. 10+ years across film production and software engineering—focusing on production/post-production tooling, immersive interactive systems, and shipping end-to-end products."
+    },
     "github": "https://github.com/gumpcpy",
     "learningUrl": "https://gumpcpy.github.io/portfolio/"
   },
   "pillars": [
     {
       "id": "workflow",
-      "label": "AI Workflow Hub",
-      "title": "AI Workflow Hub",
-      "lead": "影視製作與檔案管理解決方案——把製作現場的流程、檔案與工具串成可運作的系統。"
+      "label": {
+        "zh": "AI 工作流",
+        "en": "AI Workflow Hub"
+      },
+      "title": {
+        "zh": "AI 工作流中心",
+        "en": "AI Workflow Hub"
+      },
+      "lead": {
+        "zh": "影視製作與檔案管理解決方案——把製作現場的流程、檔案與工具串成可運作的系統。",
+        "en": "Film production and asset management solutions—wiring on-set workflows, files, and tools into systems that actually run."
+      }
     },
     {
       "id": "immersive",
-      "label": "Immersive",
-      "title": "Immersive Playground",
-      "lead": "線下沉浸式體驗系統——互動、敘事與現場工程的交會。"
+      "label": {
+        "zh": "沉浸式",
+        "en": "Immersive"
+      },
+      "title": {
+        "zh": "沉浸式實驗場",
+        "en": "Immersive Playground"
+      },
+      "lead": {
+        "zh": "線下沉浸式體驗系統——互動、敘事與現場工程的交會。",
+        "en": "Offline immersive experience systems—where interaction, narrative, and live engineering meet."
+      }
     },
     {
       "id": "apps",
-      "label": "Apps",
-      "title": "Apps",
-      "lead": "產品型 iOS App——從體驗設計到後端與推播，端到端可運行。"
+      "label": {
+        "zh": "Apps",
+        "en": "Apps"
+      },
+      "title": {
+        "zh": "Apps",
+        "en": "Apps"
+      },
+      "lead": {
+        "zh": "產品型 iOS App——從體驗設計到後端與推播，端到端可運行。",
+        "en": "Product-shaped iOS apps—from experience design through backend and push, runnable end to end."
+      }
     },
     {
       "id": "tools",
-      "label": "Other",
-      "title": "Other",
-      "lead": "小工具、Chrome 擴充與實驗——解決具體小問題的快速作品。"
+      "label": {
+        "zh": "其他",
+        "en": "Other"
+      },
+      "title": {
+        "zh": "其他",
+        "en": "Other"
+      },
+      "lead": {
+        "zh": "小工具、Chrome 擴充與實驗——解決具體小問題的快速作品。",
+        "en": "Utilities, Chrome extensions, and experiments—quick work that solves concrete small problems."
+      }
     }
   ],
   "projects": [
     {
       "id": "ai-workflow-placeholder-1",
       "pillar": "workflow",
-      "title": "Workflow project",
-      "blurb": "影視製作／檔案管理解決方案（即將整理上架）。",
-      "role": "System design · Tooling",
+      "title": {
+        "zh": "工作流專案",
+        "en": "Workflow project"
+      },
+      "blurb": {
+        "zh": "影視製作／檔案管理解決方案（即將整理上架）。",
+        "en": "Film production / asset management solution (coming soon)."
+      },
+      "role": {
+        "zh": "系統設計 · 工具",
+        "en": "System design · Tooling"
+      },
       "stack": ["Workflow", "Automation"],
       "status": "coming",
       "links": {}
@@ -47,9 +98,18 @@
     {
       "id": "immersive-placeholder-1",
       "pillar": "immersive",
-      "title": "Immersive experience A",
-      "blurb": "線下沉浸式體驗系統之一（即將整理上架）。",
-      "role": "Interactive systems",
+      "title": {
+        "zh": "沉浸式體驗 A",
+        "en": "Immersive experience A"
+      },
+      "blurb": {
+        "zh": "線下沉浸式體驗系統之一（即將整理上架）。",
+        "en": "One offline immersive experience system (coming soon)."
+      },
+      "role": {
+        "zh": "互動系統",
+        "en": "Interactive systems"
+      },
       "stack": ["Realtime", "Hardware / Software"],
       "status": "coming",
       "links": {}
@@ -57,9 +117,18 @@
     {
       "id": "immersive-placeholder-2",
       "pillar": "immersive",
-      "title": "Immersive experience B",
-      "blurb": "線下沉浸式體驗系統之二（即將整理上架）。",
-      "role": "Interactive systems",
+      "title": {
+        "zh": "沉浸式體驗 B",
+        "en": "Immersive experience B"
+      },
+      "blurb": {
+        "zh": "線下沉浸式體驗系統之二（即將整理上架）。",
+        "en": "A second offline immersive experience system (coming soon)."
+      },
+      "role": {
+        "zh": "互動系統",
+        "en": "Interactive systems"
+      },
       "stack": ["Realtime"],
       "status": "coming",
       "links": {}
@@ -67,9 +136,18 @@
     {
       "id": "immersive-placeholder-3",
       "pillar": "immersive",
-      "title": "Immersive experience C",
-      "blurb": "線下沉浸式體驗系統之三（即將整理上架）。",
-      "role": "Interactive systems",
+      "title": {
+        "zh": "沉浸式體驗 C",
+        "en": "Immersive experience C"
+      },
+      "blurb": {
+        "zh": "線下沉浸式體驗系統之三（即將整理上架）。",
+        "en": "A third offline immersive experience system (coming soon)."
+      },
+      "role": {
+        "zh": "互動系統",
+        "en": "Interactive systems"
+      },
       "stack": ["Realtime"],
       "status": "coming",
       "links": {}
@@ -78,8 +156,14 @@
       "id": "i-got-you",
       "pillar": "apps",
       "title": "I Got You",
-      "blurb": "語音陪伴與互助平台——原生 iOS、即時語音、點數帳本與多語言。",
-      "role": "Full-stack · Product",
+      "blurb": {
+        "zh": "語音陪伴與互助平台——原生 iOS、即時語音、點數帳本與多語言。",
+        "en": "Voice companionship and mutual-aid platform—native iOS, realtime voice, points ledger, and multilingual."
+      },
+      "role": {
+        "zh": "全端 · 產品",
+        "en": "Full-stack · Product"
+      },
       "stack": ["SwiftUI", "Express", "Redis", "Agora", "APNs"],
       "status": "live",
       "links": {
@@ -90,9 +174,18 @@
     {
       "id": "app-placeholder-2",
       "pillar": "apps",
-      "title": "iOS App 02",
-      "blurb": "第二款 iOS App（即將整理上架）。",
-      "role": "iOS · Product",
+      "title": {
+        "zh": "iOS App 02",
+        "en": "iOS App 02"
+      },
+      "blurb": {
+        "zh": "第二款 iOS App（即將整理上架）。",
+        "en": "Second iOS app (coming soon)."
+      },
+      "role": {
+        "zh": "iOS · 產品",
+        "en": "iOS · Product"
+      },
       "stack": ["SwiftUI"],
       "status": "coming",
       "links": {}
@@ -100,9 +193,18 @@
     {
       "id": "app-placeholder-3",
       "pillar": "apps",
-      "title": "iOS App 03",
-      "blurb": "第三款 iOS App（即將整理上架）。",
-      "role": "iOS · Product",
+      "title": {
+        "zh": "iOS App 03",
+        "en": "iOS App 03"
+      },
+      "blurb": {
+        "zh": "第三款 iOS App（即將整理上架）。",
+        "en": "Third iOS app (coming soon)."
+      },
+      "role": {
+        "zh": "iOS · 產品",
+        "en": "iOS · Product"
+      },
       "stack": ["SwiftUI"],
       "status": "coming",
       "links": {}
@@ -110,9 +212,18 @@
     {
       "id": "tools-placeholder-1",
       "pillar": "tools",
-      "title": "Utilities & extensions",
-      "blurb": "小工具與 Chrome 擴充等（即將整理上架）。",
-      "role": "Tools",
+      "title": {
+        "zh": "小工具與擴充",
+        "en": "Utilities & extensions"
+      },
+      "blurb": {
+        "zh": "小工具與 Chrome 擴充等（即將整理上架）。",
+        "en": "Utilities, Chrome extensions, and more (coming soon)."
+      },
+      "role": {
+        "zh": "工具",
+        "en": "Tools"
+      },
       "stack": ["JS", "Extensions"],
       "status": "coming",
       "links": {}
