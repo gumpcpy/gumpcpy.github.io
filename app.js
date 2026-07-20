@@ -37,7 +37,7 @@ const UI = {
   },
 };
 
-const ASSET_VERSION = "20260720b";
+const ASSET_VERSION = "20260720c";
 
 let lang = "zh";
 let catalogueData = null;
@@ -168,12 +168,15 @@ function renderPillars(data) {
 }
 
 function applyPerson(person) {
-  document.getElementById("person-name").textContent = person.name;
+  const name = t(person.name);
+  document.getElementById("person-name").textContent = name;
   document.getElementById("person-tagline").textContent = t(person.tagline);
   document.getElementById("person-about").textContent = t(person.about);
   document.getElementById("github-link").href = person.github;
   document.getElementById("learning-link").href = person.learningUrl;
-  document.title = `${person.name} — ${ui("catalogueTitle")}`;
+  const footerBrand = document.getElementById("footer-brand");
+  if (footerBrand) footerBrand.textContent = name;
+  document.title = `${name} — ${ui("catalogueTitle")}`;
 }
 
 function applyStaticUi() {
