@@ -1,6 +1,9 @@
 {
   "person": {
-    "name": "CHEN PEIYU 陳沛宇",
+    "name": {
+      "zh": "陳沛宇",
+      "en": "CHEN PEIYU"
+    },
     "handle": "gumpcpy",
     "tagline": {
       "zh": "影視製作流程平台 · 沉浸式系統 · 解決方案",
