@@ -1,0 +1,121 @@
+{
+  "person": {
+    "name": "CHEN PEIYU",
+    "handle": "gumpcpy",
+    "tagline": "Film production workflows · Immersive systems · Product engineering",
+    "about": "Technical person from Taiwan, working in Beijing. 10+ years across film production and software engineering—focusing on production/post-production tooling, immersive interactive systems, and shipping end-to-end products.",
+    "github": "https://github.com/gumpcpy",
+    "learningUrl": "https://gumpcpy.github.io/portfolio/"
+  },
+  "pillars": [
+    {
+      "id": "workflow",
+      "label": "AI Workflow Hub",
+      "title": "AI Workflow Hub",
+      "lead": "影視製作與檔案管理解決方案——把製作現場的流程、檔案與工具串成可運作的系統。"
+    },
+    {
+      "id": "immersive",
+      "label": "Immersive",
+      "title": "Immersive Playground",
+      "lead": "線下沉浸式體驗系統——互動、敘事與現場工程的交會。"
+    },
+    {
+      "id": "apps",
+      "label": "Apps",
+      "title": "Apps",
+      "lead": "產品型 iOS App——從體驗設計到後端與推播，端到端可運行。"
+    },
+    {
+      "id": "tools",
+      "label": "Other",
+      "title": "Other",
+      "lead": "小工具、Chrome 擴充與實驗——解決具體小問題的快速作品。"
+    }
+  ],
+  "projects": [
+    {
+      "id": "ai-workflow-placeholder-1",
+      "pillar": "workflow",
+      "title": "Workflow project",
+      "blurb": "影視製作／檔案管理解決方案（即將整理上架）。",
+      "role": "System design · Tooling",
+      "stack": ["Workflow", "Automation"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "immersive-placeholder-1",
+      "pillar": "immersive",
+      "title": "Immersive experience A",
+      "blurb": "線下沉浸式體驗系統之一（即將整理上架）。",
+      "role": "Interactive systems",
+      "stack": ["Realtime", "Hardware / Software"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "immersive-placeholder-2",
+      "pillar": "immersive",
+      "title": "Immersive experience B",
+      "blurb": "線下沉浸式體驗系統之二（即將整理上架）。",
+      "role": "Interactive systems",
+      "stack": ["Realtime"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "immersive-placeholder-3",
+      "pillar": "immersive",
+      "title": "Immersive experience C",
+      "blurb": "線下沉浸式體驗系統之三（即將整理上架）。",
+      "role": "Interactive systems",
+      "stack": ["Realtime"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "i-got-you",
+      "pillar": "apps",
+      "title": "I Got You",
+      "blurb": "語音陪伴與互助平台——原生 iOS、即時語音、點數帳本與多語言。",
+      "role": "Full-stack · Product",
+      "stack": ["SwiftUI", "Express", "Redis", "Agora", "APNs"],
+      "status": "live",
+      "links": {
+        "site": "https://gumpcpy.github.io/i-got-you/",
+        "repo": "https://github.com/gumpcpy/i-got-you"
+      }
+    },
+    {
+      "id": "app-placeholder-2",
+      "pillar": "apps",
+      "title": "iOS App 02",
+      "blurb": "第二款 iOS App（即將整理上架）。",
+      "role": "iOS · Product",
+      "stack": ["SwiftUI"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "app-placeholder-3",
+      "pillar": "apps",
+      "title": "iOS App 03",
+      "blurb": "第三款 iOS App（即將整理上架）。",
+      "role": "iOS · Product",
+      "stack": ["SwiftUI"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "tools-placeholder-1",
+      "pillar": "tools",
+      "title": "Utilities & extensions",
+      "blurb": "小工具與 Chrome 擴充等（即將整理上架）。",
+      "role": "Tools",
+      "stack": ["JS", "Extensions"],
+      "status": "coming",
+      "links": {}
+    }
+  ]
+}
