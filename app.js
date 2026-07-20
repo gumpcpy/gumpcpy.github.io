@@ -37,13 +37,21 @@ const UI = {
   },
 };
 
+const ASSET_VERSION = "20260720b";
+
 let lang = "zh";
 let catalogueData = null;
 
+/** Resolve bilingual field `{ zh, en }` or plain string. Never returns an object. */
 function t(value) {
   if (value == null) return "";
   if (typeof value === "string") return value;
-  return value[lang] ?? value.en ?? value.zh ?? "";
+  if (typeof value !== "object") return String(value);
+
+  const picked = value[lang] ?? value.en ?? value.zh;
+  if (picked == null) return "";
+  if (typeof picked === "string") return picked;
+  return String(picked);
 }
 
 function ui(key) {
@@ -68,7 +76,10 @@ function setLang(next) {
 function el(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
-  if (text != null) node.textContent = text;
+  if (text != null) {
+    // Guard against accidentally assigning translation objects.
+    node.textContent = typeof text === "string" ? text : t(text);
+  }
   return node;
 }
 
@@ -218,7 +229,7 @@ async function boot() {
   bindLangToggle();
   applyStaticUi();
 
-  const res = await fetch("./data/projects.json", { cache: "no-cache" });
+  const res = await fetch(`./data/projects.json?v=${ASSET_VERSION}`, { cache: "no-cache" });
   if (!res.ok) throw new Error(`Failed to load projects.json (${res.status})`);
   catalogueData = await res.json();
   applyLanguage();
