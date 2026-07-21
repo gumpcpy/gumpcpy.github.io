@@ -1,12 +1,16 @@
 const LANG_KEY = "catalogue-lang";
 const SUPPORTED = ["zh", "en"];
-const ASSET_VERSION = "20260721c";
+const ASSET_VERSION = "20260721f";
+/** Site content last updated (YYYY-MM-DD). Bump when publishing content changes. */
+const UPDATED_AT = "2026-07-21";
 
 const UI = {
   zh: {
     eyebrow: "作品目錄 · 個人簡歷",
     menuOpen: "開啟選單",
     menuClose: "關閉選單",
+    backToTop: "回到頂部",
+    updatedAt: (date) => `更新日期：${date}`,
     cta: {
       aiHub: "AI 工作流集成",
       immersive: "沉浸式實驗室",
@@ -26,6 +30,7 @@ const UI = {
     expandLearning: (n) => `展開 ${n} 張證書`,
     collapseLearning: "收合證書",
     footerNote: "個人作品目錄 · 持續新增",
+    contactLabel: "聯繫方式",
     catalogueTitle: "作品目錄",
     status: { live: "上線", wip: "進行中", coming: "即將上架" },
     linkShowcase: "展示頁 →",
@@ -37,6 +42,8 @@ const UI = {
     eyebrow: "Catalogue · CV & Events",
     menuOpen: "Open menu",
     menuClose: "Close menu",
+    backToTop: "Back to top",
+    updatedAt: (date) => `Updated: ${date}`,
     cta: {
       aiHub: "AI Hub",
       immersive: "Immersive Lab",
@@ -57,6 +64,7 @@ const UI = {
     expandLearning: (n) => `Show ${n} certificates`,
     collapseLearning: "Hide certificates",
     footerNote: "Personal catalogue · works added over time",
+    contactLabel: "Contact",
     catalogueTitle: "Catalogue",
     status: { live: "Live", wip: "WIP", coming: "Coming" },
     linkShowcase: "Showcase →",
@@ -366,6 +374,19 @@ function renderCvPlaceholder() {
   if (list) list.textContent = ui("cvEmpty");
 }
 
+function formatUpdatedAt() {
+  const [y, m, d] = UPDATED_AT.split("-").map(Number);
+  if (!y || !m || !d) return UPDATED_AT;
+  if (lang === "zh") return `${y} 年 ${m} 月 ${d} 日`;
+  const date = new Date(Date.UTC(y, m - 1, d));
+  return new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(date);
+}
+
 function applyStaticUi() {
   document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
 
@@ -380,12 +401,42 @@ function applyStaticUi() {
   const footerNote = document.getElementById("footer-note");
   if (footerNote) footerNote.textContent = ui("footerNote");
 
+  const contactLabel = document.getElementById("footer-contact-label");
+  if (contactLabel) contactLabel.textContent = `${ui("contactLabel")}：`;
+
+  const footerUpdated = document.getElementById("footer-updated");
+  if (footerUpdated) footerUpdated.textContent = ui("updatedAt")(formatUpdatedAt());
+
+  const backTop = document.getElementById("back-to-top");
+  if (backTop) backTop.setAttribute("aria-label", ui("backToTop"));
+
   renderCvPlaceholder();
 
   document.querySelectorAll("[data-lang]").forEach((btn) => {
     const active = btn.dataset.lang === lang;
     btn.setAttribute("aria-pressed", String(active));
     btn.classList.toggle("is-active", active);
+  });
+}
+
+function bindBackToTop() {
+  const btn = document.getElementById("back-to-top");
+  if (!btn || btn.dataset.bound) return;
+  btn.dataset.bound = "1";
+
+  const sync = () => {
+    const show = window.scrollY > Math.min(420, window.innerHeight * 0.55);
+    btn.hidden = !show;
+    btn.classList.toggle("is-visible", show);
+  };
+
+  window.addEventListener("scroll", sync, { passive: true });
+  sync();
+
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    closeNav();
   });
 }
 
@@ -415,6 +466,7 @@ async function boot() {
   bindLangToggle();
   bindNavToggle();
   bindLearningToggle();
+  bindBackToTop();
   applyStaticUi();
 
   const [projectsRes, learningRes] = await Promise.all([
