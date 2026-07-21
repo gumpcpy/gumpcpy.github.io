@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuHu Tech - Datacenter</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo_white.png" height="60px" width="120px" alt="HuHu Tech Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首頁</a></li>               
+                <li><a href="index.html#services">服務</a></li>
+                <li><a href="index.html#about">關於</a></li>
+                <li><a href="index.html#contact">聯絡我們</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        
+        hamburger.addEventListener("click", function() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+        
+        document.querySelectorAll(".nav-menu li a").forEach(n => n.addEventListener("click", function() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+    });
+    </script>
+
+    <div class="container">
+        <section class="datacenter-content">
+            <div class="content-card">
+                <h1>Datacenter 功能介绍</h1>
+                <div class="service-details">
+                    <h2>影像制作流程管理系统</h2>
+                    <p>Datacenter 影像管理系统是一个Web-Based 的数据库系统，提供剧组各个部门人员不同的功能与权限，结合简单的操作方式，衔接拍摄期到后期的资料整合，和制作流程，直到成片上映的完整流程协同软件。</p>
+                    <div class="image-container">
+                        <img src="images/dc/01_login.png" width="30%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+     
+            <div class="content-card">
+                <h1>系統特點</h1>
+                <div class="service-details">
+                    <h2>影像制作流程管理系统</h2>
+                    <div class="content-wrapper">
+                        <div class="text-content">
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i>可結合已有的OSS存儲 (AWS/阿里雲)</li>
+                                <li><i class="fas fa-check-circle"></i>可以手機/Pad檢視</li>
+                                <li><i class="fas fa-check-circle"></i>可指定不同帳戶權限</li>
+                                <li><i class="fas fa-check-circle"></i>可主動推送拍攝進度資訊</li>
+                                <li><i class="fas fa-check-circle"></i>可配合需求訂制功能</li>
+                                <li><i class="fas fa-check-circle"></i>安全高速連線傳輸，資料安全有保障</li>
+                            </ul>
+                        </div>
+                        <div class="image-container">
+                            <img src="images/dc/02_phonelook.png" width="50%" alt="Datacenter 功能介绍">             
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h1>每日拍攝素材報告 - 線上查詢</h1>
+                <div class="service-details"> 
+                    <p>依照不同條件搜尋，並可下載報告</p>                
+                    <div class="image-container">
+                        <img src="images/dc/03_daily_report.jpg" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                    <div class="image-container">
+                        <img src="images/dc/04_pdf_report.jpg" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>           
+
+            <div class="content-card">
+                <h1>日曆檢視模式</h1>
+                <div class="service-details"> 
+                    <p>一目瞭然拍攝日期</p>                
+                    <div class="image-container">
+                        <img src="images/dc/05_calendar.png" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h1>鏡頭查詢</h1>
+                <div class="service-details"> 
+                    <p>可依據 原始檔卡號 / 場鏡號 / 拍攝日期，鏡頭種類 NR / EL/ CL/ RF，以及評分 OK / KP / NG等條件，做篩選式資料查詢。</p>                
+                    <div class="image-container">
+                        <img src="images/dc/06_shot_filter.png" width="80%" alt="Datacenter 功能介绍">                                     
+                    </div>
+                    <div class="image-container">
+                        <img src="images/dc/07_shot_result.jpg" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h1>素材自動生成EDL</h1>
+                <div class="service-details"> 
+                    <p>自動生成EDL, 可直接将素材按照 场次 或者 拍摄时间顺序 匯出到剪辑软件。</p>               
+                    <div class="image-container">
+                        <img src="images/dc/08_edl.png" width="80%" alt="Datacenter 功能介绍">                                     
+                    </div>
+                    <div class="image-container">
+                        <img src="images/dc/09_timeline.png" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h1>拍攝場次統計</h1>
+                <div class="service-details"> 
+                    <p>可按照場次滑動瀏覽剪輯素材，方便瞭解拍攝進度</p>                                  
+                    <div class="image-container">
+                        <img src="images/dc/10_scene_view.jpg" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h1>剪輯版本比較</h1>
+                <div class="service-details"> 
+                    <p>剪輯版本比較支持EDL的比較，可以對新舊剪輯版的改變進行標示，包括新增鏡頭、刪除鏡頭，增減Frame等，並輸出EXCEL報告</p>                                  
+                    <div class="image-container">
+                        <img src="images/dc/11_edit_comp_summary.png" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                    <div class="image-container">
+                        <img src="images/dc/12_edit_comp_xls.jpg" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h1>特效表單</h1>
+                <div class="service-details"> 
+                    <p>利用簡單的EDL和Excel，就可以上傳完成一個版本的特效鏡頭列表。方便分發和查詢
+                        每一個版本的問題回報還有路徑，用簡單的方式上傳，整合在一起</p>                                  
+                    <div class="image-container">
+                        <img src="images/dc/11_edit_comp_summary.png" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                    <div class="image-container">
+                        <img src="images/dc/13_vfx_list.jpg" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h1>特效會議紀錄</h1>
+                <div class="service-details">                                                                         
+                    <p>每一次的審核，都有對應的反饋截圖，說明需要改進的示意，讓特效公司的製作人員可以充分理解。
+                        每次的檢查都輸出成PDF報告，方便相關的部門紀錄</p>
+                    <div class="image-container">
+                        <img src="images/dc/14_vfx_meeting.png" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                    <div class="image-container">
+                        <img src="images/dc/15_vfx_meeting_detail.jpg" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h1>特效進度</h1>
+                <div class="service-details">    
+                    <p>依照特效場景，本數(Reel)，製作公司顯示，可以方便導演和製作團隊了解進度</p>                                                                     
+                    <div class="image-container">
+                        <img src="images/dc/16_vfx_progress.png" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-card">
+                <h1>製作期表</h1>
+                <div class="service-details">    
+                    <p>可以充分顯示後期製作過程中，交互重疊的製作項目，
+                        可以設定emai提醒發送給相關人員
+                        也可以匯出成為Excel</p>                                                                     
+                    <div class="image-container">
+                        <img src="images/dc/17_production_schedule.jpg" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h1>特效審核</h1>
+                <div class="service-details">    
+                    <p>上傳的特效鏡頭，可以自動轉檔為H.264/H.265，以及轉碼一份適合網頁播放的串流檔案，方便在路上用Pad做創意性的審核</p>                                                                     
+                    <div class="image-container">
+                        <img src="images/dc/18_vfx_qc.jpg" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                    <div class="image-container">
+                        <img src="images/dc/19_vfx_qc.jpg" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h1>輸出檔案</h1>
+                <div class="service-details">    
+                    <p>每一個輸出的檔案，都有相關的輸出規格填寫，讓工作人員容易了解和操作</p>   
+                    <p>現在也結合了雲端存儲以及和雲端渲染的廠商進行資源整合，讓渲染和傳送的工作更安全和便捷</p>                                                                                    
+                    <div class="image-container">
+                        <img src="images/dc/20_delivery.png" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h1>Datacenter 系統取得專利，並且已經在多部大型視效電影的管理中應用</h1>
+                <div class="service-details">                                                                                                      
+                    <div class="image-container">
+                        <img src="images/dc/21_posters.jpg" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                    <div class="image-container">
+                        <img src="images/dc/22_patent_cn.jpg" width="80%" alt="Datacenter 功能介绍">             
+                    </div>
+                </div>
+            </div>
+
+            
+            
+
+        </section>
+    </div>
+
+   <!-- 聯絡我們 -->
+   <div id="contact-placeholder"></div>
+    
+
+   <script src="js/jquery-3.6.0.min.js"></script>
+   <script>
+    $(function(){
+        $("#nav-placeholder").load("nav.html", function() {
+            // 在導航欄加載完成後初始化事件
+            console.log('導航欄加載完成');
+        });
+        $("#contact-placeholder").load("contact.html");        
+    });
+</script>
+</body>
+</html>

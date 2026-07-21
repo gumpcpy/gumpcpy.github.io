@@ -1,3 +1,21 @@
 .DS_Store
 **/.DS_Store
+
+# Local / secrets
+.env.company
 github_site/
+
+# Dependencies & build outputs
+node_modules/
+dist-personal/
+apps/company/dist/
+apps/company/public/media/
+apps/company/public/content/
+apps/company/public/favicon.ico
+
+# Legacy Keynote / PDF player bundle (huge; images already extracted)
+legacy/huhu-website/assets/
+
+# Editor
+*.log
+.vite/

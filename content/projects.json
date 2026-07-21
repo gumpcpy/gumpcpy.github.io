@@ -1,0 +1,234 @@
+{
+  "person": {
+    "name": {
+      "zh": "陳沛宇",
+      "en": "CHEN PEIYU"
+    },
+    "handle": "gumpcpy",
+    "tagline": {
+      "zh": "影視製作流程平台 · 沉浸式系統 · 解決方案",
+      "en": "Film production workflows platform · Immersive systems · Solutions"
+    },
+    "about": {
+      "zh": "擅長問題拆解與解決方案設計。十餘年橫跨影視製作與軟體工程。系統設計、產品開發、沉浸式互動與 AI 工作流。",
+      "en": "Skilled in problem decomposition and solution design. Over a decade spanning film production and software engineering. System architecture, product development, immersive interaction, and AI workflows."
+    },
+    "github": "https://github.com/gumpcpy"
+  },
+  "pillars": [
+    {
+      "id": "workflow",
+      "label": {
+        "zh": "AI 工作流",
+        "en": "AI Workflow Hub"
+      },
+      "title": {
+        "zh": "AI 工作流平台",
+        "en": "AI Workflow Hub"
+      },
+      "lead": {
+        "zh": "影視製作與檔案管理解決方案——把製作現場的流程、檔案與工具串成可運作的系統。",
+        "en": "Film production and asset management solutions—wiring on-set workflows, files, and tools into systems that actually run."
+      }
+    },
+    {
+      "id": "immersive",
+      "label": {
+        "zh": "沉浸式",
+        "en": "Immersive"
+      },
+      "title": {
+        "zh": "沉浸式實驗場",
+        "en": "Immersive Playground"
+      },
+      "lead": {
+        "zh": "線下沉浸式體驗系統——互動、敘事與現場工程的交會。",
+        "en": "Offline immersive experience systems—where interaction, narrative, and live engineering meet."
+      }
+    },
+    {
+      "id": "apps",
+      "label": {
+        "zh": "Apps",
+        "en": "Apps"
+      },
+      "title": {
+        "zh": "Apps",
+        "en": "Apps"
+      },
+      "lead": {
+        "zh": "產品型 iOS App——從體驗設計到後端與推播，端到端可運行。",
+        "en": "Product-shaped iOS apps—from experience design through backend and push, runnable end to end."
+      }
+    },
+    {
+      "id": "tools",
+      "label": {
+        "zh": "其他",
+        "en": "Other"
+      },
+      "title": {
+        "zh": "其他",
+        "en": "Other"
+      },
+      "lead": {
+        "zh": "小工具、Chrome 擴充與實驗——解決具體小問題的快速作品。",
+        "en": "Utilities, Chrome extensions, and experiments—quick work that solves concrete small problems."
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "ai-workflow-placeholder-1",
+      "pillar": "workflow",
+      "title": {
+        "zh": "Datacenter®",
+        "en": "Datacenter®"
+      },
+      "blurb": {
+        "zh": "影視製作／智能歸檔系統 / 整合插件。",
+        "en": "Film production / intelligent asset management system / integrated plugins."
+      },
+      "role": {
+        "zh": "系統設計 · 整合開發 · 工具",
+        "en": "System design · Integration · Tooling"
+      },
+      "stack": ["Workflow", "Automation", "Integration"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "immersive-placeholder-1",
+      "pillar": "immersive",
+      "title": {
+        "zh": "傀儡劇場",
+        "en": "Puppet Theater"
+      },
+      "blurb": {
+        "zh": "沉浸式體驗劇場——互動、敘事與現場工程的交會。",
+        "en": "Immersive experience theater—where interaction, narrative, and live engineering meet."
+      },
+      "role": {
+        "zh": "沉浸式 · 互動系統",
+        "en": "Immersive · Interactive systems"
+      },
+      "stack": ["Realtime", "Hardware / Software", "Immersive"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "immersive-placeholder-2",
+      "pillar": "immersive",
+      "title": {
+        "zh": "阿芙洛狄特的考驗",
+        "en": "The Test of Aphrodite"
+      },
+      "blurb": {
+        "zh": "沉浸式體驗劇場——互動、敘事與現場工程的交會。",
+        "en": "Immersive experience theater—where interaction, narrative, and live engineering meet."
+      },
+      "role": {
+        "zh": "沉浸式 · 互動系統",
+        "en": "Immersive · Interactive systems"
+      },
+      "stack": ["Realtime", "Hardware / Software", "Immersive"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "immersive-placeholder-3",
+      "pillar": "immersive",
+      "title": {
+        "zh": "賽姬的問卷",
+        "en": "The Questionnaire of Psyche"
+      },
+      "blurb": {
+        "zh": "沉浸式體驗劇場——互動、敘事與現場工程的交會。",
+        "en": "Immersive experience theater—where interaction, narrative, and live engineering meet."
+      },
+      "role": {
+        "zh": "沉浸式 · 互動系統",
+        "en": "Immersive · Interactive systems"
+      },
+      "stack": ["Realtime", "Hardware / Software", "Immersive"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "i-got-you",
+      "pillar": "apps",
+      "title": "I Got You",
+      "blurb": {
+        "zh": "語音陪伴與互助平台——原生 iOS、即時語音、點數帳本與多語言。",
+        "en": "Voice companionship and mutual-aid platform—native iOS, realtime voice, points ledger, and multilingual."
+      },
+      "role": {
+        "zh": "全端 · 產品",
+        "en": "Full-stack · Product"
+      },
+      "stack": ["SwiftUI", "Express", "Redis", "Agora", "APNs"],
+      "status": "live",
+      "links": {
+        "site": "https://gumpcpy.github.io/i-got-you/",
+        "repo": "https://github.com/gumpcpy/i-got-you"
+      }
+    },
+    {
+      "id": "app-placeholder-2",
+      "pillar": "apps",
+      "title": {
+        "zh": "毅力表",
+        "en": "The Tenacity Table"
+      },
+      "blurb": {
+        "zh": "毅力表——追蹤、記錄與激勵。",
+        "en": "The Tenacity Table—tracking, recording, and激励."
+      },
+      "role": {
+        "zh": "iOS · 產品",
+        "en": "iOS · Product"
+      },
+      "stack": ["SwiftUI"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "app-placeholder-3",
+      "pillar": "apps",
+      "title": {
+        "zh": "Zookly",
+        "en": "Zookly"
+      },
+      "blurb": {
+        "zh": "輕量陪伴數位替身App——輕量陪伴、數位替身與情感支持。",
+        "en": "Lightweight companion digital surrogate app—lightweight companionship, digital surrogate, and emotional support."
+      },
+      "role": {
+        "zh": "iOS · 產品",
+        "en": "iOS · Product"
+      },
+      "stack": ["SwiftUI"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "tools-placeholder-1",
+      "pillar": "tools",
+      "title": {
+        "zh": "小工具與擴充",
+        "en": "Utilities & extensions"
+      },
+      "blurb": {
+        "zh": "小工具與 Chrome 擴充等（即將整理上架）。",
+        "en": "Utilities, Chrome extensions, and more (coming soon)."
+      },
+      "role": {
+        "zh": "工具",
+        "en": "Tools"
+      },
+      "stack": ["JS", "Extensions"],
+      "status": "coming",
+      "links": {}
+    }
+  ]
+}

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuHu Tech - Home</title>    
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css?v=1.2">
+    <link rel="stylesheet" href="css/lib/all.min.css">
+    <script src="js/lib/chart.min.js"></script>
+</head>
+<body>      
+   <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo_white.png" height="60px" width="120px" alt="HuHu Tech Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>               
+                <li><a href="index.html#services">服务项目</a></li>
+                <li><a href="index.html#about">关于我们</a></li>
+                <li><a href="index.html#contact">联系我们</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        
+        hamburger.addEventListener("click", function() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+        
+        document.querySelectorAll(".nav-menu li a").forEach(n => n.addEventListener("click", function() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+    });
+    </script>
+
+
+    <!-- 主要内容区域 -->
+    <main>
+        <section id="home" class="hero">          
+            <div class="hero-content">
+                <div class="hero-column">
+                    <h1 class="fade-in">影像技术服务</h1>
+                    <p class="fade-in"><a href="#services"   class="dotted-link">Datacenter: 素材資料庫,特效QC反饋管理</a></p>
+                    <p class="fade-in"><a href="#services-2" class="dotted-link">調光調色: 網路電影短片劇集調光</a></p>
+                    <p class="fade-in"><a href="#services-3" class="dotted-link">歸檔系統: 素材歸檔,交付管理,版權買賣</a></p>
+                    <p class="fade-in"><a href="#services-4" class="dotted-link">工具開發: 批次導入,拷貝,套片,AI識別等</a></p>
+                </div>
+                <div class="hero-column">
+                    <h1 class="fade-in">沉浸体验设计开发</h1>
+                    <p class="fade-in"><a href="#services-5" class="dotted-link">遠距控制: 遠距燈光和相機控制</a></p>
+                    <p class="fade-in"><a href="#services-5" class="dotted-link">互动装置設計</a></p>
+                    <p class="fade-in"><a href="#services-5" class="dotted-link">多媒体展演、互動体验</a></p>
+                </div>
+            </div>
+        </section>       
+        
+        <section id="services" class="services service-1">
+            <div class="container">
+                <div class="overlay"></div>
+                <div class="wave"></div>
+                <div class="service-content">
+                    <h1 class="fade-in">Datacenter</h1>
+                    <!-- <h2> = 线上的资料库 + 离线的工具集 + 工业标准的管理流程 -->
+                    <!-- </h2> -->
+                    <div class="icons-container">
+                        <img src="images/dcis.png" alt="Datacenter = 线上的资料库 + 离线的工具集" class="dcis-image">
+                    </div>
+                    <!-- <h3><em>以镜头为单位,以时间线为主轴的特效管理</em></h3> -->
+                    
+                    <br>
+                    
+                    <!-- <h3>| 涵盖服务</h3>
+                    <p style="font-size:1.3em; color:rgb(203, 203, 203)">
+                        1.批次导入拍摄素材资料,关联场记单,建立素材资料库<br>
+                        2.批次拷贝有效素材到剪辑/特效剪辑使用的阵列<br>
+                        3.自动化特效镜头编号,输出,输入流程<br>
+                        4.建立特效镜头反馈流程<br>
+                        5.技术顾问<br>
+                        6.影像制作流程订制开发
+                    </p> -->
+                    <!-- <h3>| 什么是Datacenter?</h3>
+                    <p style="font-size:1.3em; color:rgb(203, 203, 203)">
+                        关联式资料库 + 系列工具集<br>
+                        具有15+年以上的大型项目制作经验<br>
+                        开发的流程符合影视工业化标准的运作<br>
+                        了解行业痛点，因此能充分落实在项目中，<br>
+                        达到确实的降本增效。<br>
+                        平均节省管理成本达45%
+                    </p> -->
+
+                    <!-- <h3>| 主要功能</h3>
+                    <p style="font-size:1.3em; color:rgb(203, 203, 203)">
+                        1.用有弹性又具有规范的工业化流程提升制作效率<br>
+                        2.關聯式資料庫<br>
+                        3.自动化特效镜头编号,输出,输入流程<br>
+                        4.建立特效镜头反馈流程<br>
+                        5.技术顾问<br>
+                        6.影像制作流程订制开发
+                    </p>
+                    <br> -->
+                    <!-- <h3>| 可选服务</h3>
+                    <p style="font-size:1.3em; color:rgb(203, 203, 203)">
+                        1.项目工作流程设计,工具开发<br>
+                        2.协作或备份用阵列购置以及架设<br>
+                        3.云端存储空间租用及架设,权限控管,和使用管理<br>
+                        4.专人管理特效I/O和审核,套片,反馈管理
+                    </p>
+                    <br> -->
+                    
+                        <ul class="feature-list2">
+                            <li><i class="fas fa-check-circle"></i>降本增效: 平均管理成本降低45%,效率提升1.8倍</li>
+                            <li><i class="fas fa-check-circle"></i>数据安全: https及细致的权限划分,确保数据安全,离线工具集保障本地资料安全</li>                          
+                            <li><i class="fas fa-check-circle"></i>技术支持: 具有项目经验的技术人员24H的微信群能高效响应系统问题</li>      
+                            <li><i class="fas fa-check-circle"></i>易学易用: 根据多年经验设计的流程,简单易学,更可以快速布局</li>
+                            <li><i class="fas fa-check-circle"></i>项目归档: 留存完整项目索引,方便查找交付的各种版本</li>                                                                                                        
+                        </ul>      
+
+                    <div class="radar-charts-container">
+                        <div class="radar-chart-wrapper">
+                            <h3>电影视效制作大片提升部门效率的百分比</h3>
+                            <div class="radar-chart-container">
+                                <canvas id="radarChart1"></canvas>
+                            </div>
+                        </div>
+                        <div class="radar-chart-wrapper">
+                            <h3>古装仙侠剧集提升部门效率的百分比</h3>
+                            <div class="radar-chart-container">
+                                <canvas id="radarChart2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="fade-in">| 适合</h3>
+                    <p style="font-size:1.3em; color:rgb(203, 203, 203)">
+                    <b style="color:rgb(227, 227, 227)">剧组</b> 项目管理使用,制片,特效剪辑,特效I/O<br>
+                    <b style="color:rgb(227, 227, 227)">后期制作公司</b> 镜头QC进度与反馈管理<br>
+                    <b style="color:rgb(227, 227, 227)">特效公司</b> 镜头管理</p>
+                    <br>
+                    <h3>| 合作方式</h3>
+                    <p style="font-size:1.3em; color:rgb(203, 203, 203)">项目签约,微信群组24H专人服务</p>
+                    <p style="font-size:1.3em; color:rgb(203, 203, 203)">可以专案架设 也可以落地部署</p>
+                                    
+                    
+                    <br>
+                    <h3>| 参与项目</h3>
+                    <div class="project-carousel">
+                        <div class="project-track">
+                            <div class="project-item">
+                                <a href="https://www.imdb.com/title/tt28131433/" target="_blank">
+                                    <img src="images/posters/sd.jpg"alt="射雕英雄传之侠之大者">                                
+                                </a>
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/cjh.jpg" alt="长津湖">
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/qgjc.jpg" alt="千古玦尘">
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/drj3.jpg" alt="狄仁杰之四大天王">
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/xy.jpg" alt="西游2">
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/qm.jpg" alt="奇门遁甲">                                                        
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/whs.jpg" alt="智取威虎山">                                                        
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/drj2.jpg" alt="狄仁杰之神都龙王">                                                        
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/fs.jpg" alt="封神传奇">                                                        
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/fsdg.jpg" alt="龙门飞甲">                                                        
+                            </div>
+                           
+                        </div>
+                    </div>
+                    
+                    <div class="service-buttons">
+                        <a href="#contact" class="service-button">联系我们</a>
+                        <a href="01_datacenter.html" target="_blank" class="service-button">功能介绍 <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#home" class="home-button"><i class="fas fa-home"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>      
+        
+        <section id="services-2" class="services service-2">
+            <div class="container">
+                <div class="overlay"></div>
+                <div class="wave"></div>
+                <div class="service-content">
+                    <h1 class="fade-in">调光调色</h1>
+                    <h2>网络电影短片剧集调色</h2>
+                    <h4 class="fade-in">使用设备:
+                        <a href="https://www.sgo.es/" target="_blank" class="dotted-link">SGO Mistika</a>,
+                        Davinci Resolve,尊正监视器	</h4>
+                    <br>
+                    <h3>| 调色项目</h3>
+                    <div class="project-carousel">
+                        <div class="project-track">
+                            <div class="project-item">                              
+                                <img src="images/posters/gsgm.jpg"alt="棺⼭古墓">                                                              
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/shuiguai2.jpg" alt="⽔怪2">
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/ywcg.jpg" alt="欲望城国">
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/fyz.jpg" alt="⻛语咒">
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/zq.jpg" alt="追球">
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/zz.jpg" alt="祖宗⼗九代">
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/posters/ssy.jpg" alt="三少爷的剑">                                                        
+                            </div>                            
+                            <div class="project-item">                              
+                                <img src="images/posters/xms2.jpg" alt="⼩⻔神">                                                        
+                            </div>   
+                            <div class="project-item">                              
+                                <img src="images/posters/ykq.jpg" alt="夜孔雀">                                                        
+                            </div>                        
+                            
+                        </div>
+                    </div>
+                    <div class="service-buttons">
+                        <a href="#contact" class="service-button">联系我们</a>
+                        <a href="#home" class="home-button"><i class="fas fa-home"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>     
+
+        <section id="services-3" class="services service-3">
+            <div class="container">
+                <div class="overlay"></div>
+                <div class="wave"></div>
+                <div class="service-content">
+                    <h1 class="fade-in">归档系统</h1>
+                    <h2>
+                        <em>量身定制专业的影像归档流程及素材调用系统</em>                        
+                    </h2>
+                    <h3>包含:系统采购、建置、部署、开发</h3>
+                    <br>
+                    <h3 class="fade-in">| 适合</h3>
+                    <p style="font-size:1.3em; color:rgb(203, 203, 203)">
+                        影视公司素材归档系统搭建部署<br>
+                        方便展示,版权买卖,查找拍摄素材,输出打包各种版本</p>
+                    <br>
+                    <h3>| 效果</h3>
+                    <p style="font-size:1.3em; color:rgb(203, 203, 203)">
+                        展示项目成果,版权买卖,查找拍摄素材,输出打包各种版本
+                    </p>
+                    <br>
+                    <h3>| 合作方式</h3>
+                    <p style="font-size:1.3em; color:rgb(203, 203, 203)">项目签约,维护年约</p>
+                    
+                    <div class="service-buttons">
+                        <a href="#contact" class="service-button">联系我们</a>
+                        <a href="03_archive.html" target="_blank" class="service-button">案例介绍 <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#home" class="home-button"><i class="fas fa-home"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>     
+        
+        <section id="services-4" class="services service-4">
+            <div class="container">
+                <div class="overlay"></div>
+                <div class="wave"></div>
+                <div class="service-content">
+                    <h1 class="fade-in">其它开发</h1>
+                    <h2 class="fade-in"><em>与影像制作有关的工具开发</em><h2>
+                    <h3>
+                    Ex.批次导入,挑条拷贝,批次套片,自动上编号,AI识别,云端存储,云端审核镜头等</h3>
+                    <br>
+                    <h3>| 工具展示</h3>
+                    <div class="project-carousel">
+                        <div class="project-track">
+                            <div class="project-item">                              
+                                <img src="images/apps/edl_copy.png"alt="挑条拷贝">      
+                                <span>挑条拷贝</span>                                                        
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/apps/scan_disk.png" alt="扫盘报告">
+                                <span>扫盘报告</span>                                                        
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/apps/batch_conform.png" alt="批次套片">
+                                <span>批次套片</span>                                                        
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/apps/3d_subtitle.png" alt="立体字幕">
+                                <span>立体字幕</span>                                                        
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/apps/watermark1.png" alt="批次压水印">
+                                <span>批次压水印</span>                                                        
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/apps/auto_number.png" alt="自动上编号">
+                                <span>自动上编号</span>                                                        
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/apps/marker_export.png" alt="DavinciResolveMarker导出">
+                                <span>DavinciResolveMarker导出</span>                                                        
+                            </div>                          
+                        </div>
+                    </div>
+                    <div class="service-buttons">
+                        <a href="#contact" class="service-button">联系我们</a>
+                        <a href="https://github.com/gumpcpy" target="_blank" class="service-button">GitHub <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#home" class="home-button"><i class="fas fa-home"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>     
+
+        <section id="services-5" class="services service-5">
+            <div class="container">
+                <div class="overlay"></div>
+                <div class="wave"></div>
+                <div class="service-content">
+                    <h1 class="fade-in">沉浸体验</h1>
+                    <h2 class="fade-in"><em>线下体验设计、开发</em></h2>
+                    <h3>
+                        包括远距控制相机矩阵,灯光矩阵,影音互动体验</h3>
+                    <h3>| 作品展示</h3>
+                    <div class="project-carousel">
+                        <div class="project-track">
+                            <div class="project-item">                              
+                                <img src="images/immersive/czc.jpg"alt="劫爱错中错">      
+                                <span><a href="https://mp.weixin.qq.com/s/RzoCiue7S2SlrTlgQZP4Qw" class="dotted-link" target="_blank">劫爱错中错</a></span>                                                        
+                            </div>
+                            <div class="project-item">                              
+                                <img src="images/immersive/aphro.jpg"alt="阿芙洛狄忒的考验">      
+                                <span><a href="https://mp.weixin.qq.com/s/H2IROnPgZ626zGlK9MsEhQ" class="dotted-link" target="_blank">阿芙洛狄忒的考验</a></span>                                                        
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="service-buttons">
+                        <a href="#contact" class="service-button">联系我们</a>
+                        <!-- <a href="#services-5" class="service-button">了解更多</a> -->
+                        <a href="#home" class="home-button"><i class="fas fa-home"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>     
+       
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>关于我们</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>从2010来到北京,加入徐克导演的制作团队,参与了多部电影的制作,从项目筹备,现场拍摄,到后期制作都参与其中.
+                            制作龙门飞甲后期时发现特效版本控制是一个可以流程化,且适合在线上查询的系统,于是开发了datacenter,
+                            以及一些桌面小工具来帮助立体素材套片以及立体字幕制作.
+                            2012年成立映日象限影像技术有限公司,专注于后期立体制作,调光调色,熟悉了色彩科学,以及各种档案和制作标准.
+                            把这些从事影像技术的经验,结合十几年来的软件开发技术,陆续开发了许多针对后期制作的流程和工具.
+                            2018年,开始接触沉浸式体验,发觉把影像技术应用在线下体验上,让玩家在丰富的声光效果中真实互动,
+                            更能体会到影像技术的魔力.于是成立虎胡科技有限公司,专注于影像技术在沉浸式体验上的应用.同时也不忘初心,
+                            将电影后期制作的经验,加上互联网科技与AI技术,带给行业解决方案,确实解决技术问题,提升制作效率.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <!-- 联系我们 -->
+    <div id="contact-placeholder"></div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){           
+            $("#contact-placeholder").load("contact.html");
+        });
+
+        // 添加雷达图
+        const ctx1 = document.getElementById('radarChart1').getContext('2d');
+        
+        // 创建自定义插件来显示顶点百分比
+        const vertexLabelPlugin = {
+            id: 'vertexLabel',
+            afterDraw: function(chart) {
+                const ctx = chart.ctx;
+                const meta = chart.getDatasetMeta(0);
+                const data = meta.data;
+                const dataset = chart.data.datasets[0];
+                
+                ctx.save();
+                ctx.font = 'bold 24px Arial';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                
+                // 获取图表中心点
+                const centerX = (chart.chartArea.left + chart.chartArea.right) / 2;
+                const centerY = (chart.chartArea.top + chart.chartArea.bottom) / 2;
+                
+                data.forEach((point, index) => {
+                    const value = dataset.data[index];
+                    const label = chart.data.labels[index];
+                    const x = point.x;
+                    const y = point.y;
+                    
+                    // 计算从中心点到顶点的角度
+                    const angle = Math.atan2(y - centerY, x - centerX);
+                    const distance = 40; // 向外偏移的距离
+                    const labelX = x + Math.cos(angle) * distance;
+                    const labelY = y + Math.sin(angle) * distance;
+                    
+                    // 使用数据集的颜色绘制文字
+                    ctx.fillStyle = dataset.borderColor;
+                    
+                    // 绘制项目名称
+                    ctx.font = 'bold 16px Arial';
+                    ctx.fillText(label, labelX, labelY - 15);
+                    
+                    // 绘制数值
+                    ctx.font = 'bold 24px Arial';
+                    ctx.fillText(`+${value}%`, labelX, labelY + 15);
+                });
+                
+                ctx.restore();
+            }
+        };
+
+        const radarChart1 = new Chart(ctx1, {
+            type: 'radar',
+            data: {
+                labels: ['视效制片', '视效剪辑', '档案I/O', '镜头QC'],
+                datasets: [{
+                    label: '电影视效制作',
+                    data: [36, 72, 41, 33],
+                    backgroundColor: 'rgba(0, 82, 204, 0.2)',
+                    borderColor: 'rgba(0, 82, 204, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(0, 82, 204, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(0, 82, 204, 1)'
+                }]
+            },
+            options: {
+                maintainAspectRatio: true,
+                aspectRatio: 1.5,
+                scales: {
+                    r: {
+                        min: 0,
+                        max: 100,
+                        beginAtZero: true,
+                        angleLines: {
+                            display: false
+                        },
+                        grid: {
+                            display: false
+                        },
+                        pointLabels: {
+                            display: false
+                        },
+                        ticks: {
+                            display: false,
+                            backdropColor: 'transparent'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `效率提升: ${context.raw}%`;
+                            }
+                        }
+                    }
+                },
+                animation: {
+                    duration: 2000,
+                    easing: 'easeInOutQuart'
+                }
+            },
+            plugins: [vertexLabelPlugin]
+        });
+
+        const ctx2 = document.getElementById('radarChart2').getContext('2d');
+        const radarChart2 = new Chart(ctx2, {
+            type: 'radar',
+            data: {
+                labels: ['视效制片', '视效剪辑', '档案I/O', '镜头QC'],
+                datasets: [{
+                    label: '古装仙侠剧集',
+                    data: [40, 74, 43, 39],
+                    backgroundColor: 'rgba(255, 71, 87, 0.2)',
+                    borderColor: 'rgba(255, 71, 87, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(255, 71, 87, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(255, 71, 87, 1)'
+                }]
+            },
+            options: {
+                maintainAspectRatio: true,
+                aspectRatio: 1.5,
+                scales: {
+                    r: {
+                        min: 0,
+                        max: 100,
+                        beginAtZero: true,
+                        angleLines: {
+                            display: false
+                        },
+                        grid: {
+                            display: false
+                        },
+                        pointLabels: {
+                            display: false
+                        },
+                        ticks: {
+                            display: false,
+                            backdropColor: 'transparent'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `效率提升: ${context.raw}%`;
+                            }
+                        }
+                    }
+                },
+                animation: {
+                    duration: 2000,
+                    easing: 'easeInOutQuart'
+                }
+            },
+            plugins: [vertexLabelPlugin]
+        });
+
+        // 添加滑动功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取所有轮播区域
+            const carousels = document.querySelectorAll('.project-carousel');
+            
+            carousels.forEach(carousel => {
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                carousel.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    carousel.style.cursor = 'grabbing';
+                    startX = e.pageX - carousel.offsetLeft;
+                    scrollLeft = carousel.scrollLeft;
+                });
+
+                carousel.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    carousel.style.cursor = 'grab';
+                });
+
+                carousel.addEventListener('mouseup', () => {
+                    isDown = false;
+                    carousel.style.cursor = 'grab';
+                });
+
+                carousel.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - carousel.offsetLeft;
+                    const walk = (x - startX) * 2;
+                    carousel.scrollLeft = scrollLeft - walk;
+                });
+
+                // 添加触摸支持
+                carousel.addEventListener('touchstart', (e) => {
+                    isDown = true;
+                    startX = e.touches[0].pageX - carousel.offsetLeft;
+                    scrollLeft = carousel.scrollLeft;
+                });
+
+                carousel.addEventListener('touchend', () => {
+                    isDown = false;
+                });
+
+                carousel.addEventListener('touchmove', (e) => {
+                    if (!isDown) return;
+                    const x = e.touches[0].pageX - carousel.offsetLeft;
+                    const walk = (x - startX) * 2;
+                    carousel.scrollLeft = scrollLeft - walk;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

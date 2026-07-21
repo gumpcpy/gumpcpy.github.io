@@ -1,0 +1,90 @@
+{
+  "brand": {
+    "name": "HuHu Tech",
+    "nameZh": "虎胡科技",
+    "legal": "虎胡科技有限公司",
+    "domain": "https://www.huhu-tech.com",
+    "icp": "京ICP备19038282号"
+  },
+  "tagline": {
+    "zh": "影像技术服务 · 沉浸体验设计开发",
+    "en": "Imaging technology services · Immersive experience design"
+  },
+  "hero": {
+    "lines": [
+      {
+        "title": { "zh": "影像技术服务", "en": "Imaging technology" },
+        "items": [
+          { "zh": "Datacenter：素材资料库、特效 QC 反馈管理", "en": "Datacenter: asset DB & VFX QC feedback" },
+          { "zh": "调光调色：网络电影／短片／剧集", "en": "Color grading for film & series" },
+          { "zh": "归档系统：素材归档、交付、版权买卖", "en": "Archive systems for delivery & rights" },
+          { "zh": "工具开发：批次导入、拷贝、套片、AI 识别", "en": "Tooling: ingest, copy, conform, AI" }
+        ]
+      },
+      {
+        "title": { "zh": "沉浸体验设计开发", "en": "Immersive experience" },
+        "items": [
+          { "zh": "远距控制：灯光与相机矩阵", "en": "Remote lighting & camera matrices" },
+          { "zh": "互动装置设计", "en": "Interactive installation design" },
+          { "zh": "多媒体展演、互动体验", "en": "Multimedia shows & interactive experiences" }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "address": {
+      "zh": "北京市朝阳区东亿国际传媒产业园C10号楼301",
+      "en": "C10-301, Dongyi International Media Park, Chaoyang, Beijing"
+    },
+    "phone": "+86 136 8312 0708",
+    "email": "gumpcpy@qq.com",
+    "wechatImage": "contact/wechat_cpy.jpg"
+  },
+  "services": [
+    {
+      "id": "datacenter",
+      "surfaces": ["company", "personal"],
+      "title": "Datacenter",
+      "blurb": {
+        "zh": "线上资料库 + 离线工具集 + 工业化流程——特效镜头管理与反馈。",
+        "en": "Online DB + offline toolset + industrial workflows for VFX shot management."
+      }
+    },
+    {
+      "id": "color",
+      "surfaces": ["company"],
+      "title": { "zh": "调光调色", "en": "Color grading" },
+      "blurb": {
+        "zh": "网络电影、短片、剧集调色（Mistika / DaVinci Resolve）。",
+        "en": "Color for web films, shorts, and series (Mistika / DaVinci Resolve)."
+      }
+    },
+    {
+      "id": "archive",
+      "surfaces": ["company"],
+      "title": { "zh": "归档系统", "en": "Archive systems" },
+      "blurb": {
+        "zh": "量身定制影像归档与素材调用系统。",
+        "en": "Custom imaging archive and asset retrieval systems."
+      }
+    },
+    {
+      "id": "tools",
+      "surfaces": ["company", "personal"],
+      "title": { "zh": "工具开发", "en": "Tooling" },
+      "blurb": {
+        "zh": "批次导入、挑条拷贝、套片、编号、水印等后期工具。",
+        "en": "Ingest, EDL copy, conform, numbering, watermarking, and more."
+      }
+    },
+    {
+      "id": "immersive",
+      "surfaces": ["company", "personal"],
+      "title": { "zh": "沉浸体验", "en": "Immersive" },
+      "blurb": {
+        "zh": "线下体验设计与开发——远距控制、互动装置、多媒体展演。",
+        "en": "Offline experience design—remote control, installations, multimedia shows."
+      }
+    }
+  ]
+}

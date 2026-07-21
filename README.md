@@ -1,37 +1,73 @@
-# gumpcpy.github.io
+# gump-sites
 
-Personal catalogue for **CHEN PEIYU** (`gumpcpy`).
+本地同時維護 **個人 catalogue** 與 **HuHu Tech 公司站**，共用 `content/` 與 `assets/`，分別建置後推到兩個地方。
 
-**Live:** https://gumpcpy.github.io/
+| 站點 | 網址 | 輸出 | 部署 |
+|------|------|------|------|
+| 個人 | https://gumpcpy.github.io/ | `dist-personal/` | GitHub Actions → Pages |
+| 公司 | https://www.huhu-tech.com/ | `apps/company/dist/` | `rsync` → `/var/www/huhu_site` |
 
-## Structure
+## 目錄
 
-| Path | Purpose |
-|------|---------|
-| `index.html` | Catalogue shell |
-| `app.js` | Renders pillars/cards/certificates from JSON |
-| `data/projects.json` | **Add / update works here** |
-| `data/learning.json` | **Coursera certificates / learning journey** |
-| `assets/coursera/` | Certificate & org images |
-| `styles.css` | Visual system |
-
-## Add a project
-
-1. Create a public showcase repo (optional Pages), e.g. `i-got-you`
-2. Edit `data/projects.json` — set `status` to `live` / `wip` / `coming` and fill `links`
-3. Commit & push this repo
-
-## Local preview
-
-```bash
-cd /Users/gump/Documents/_Proj/github-my-page
-python3 -m http.server 8080
-# open http://localhost:8080
+```text
+content/                 # 文案 JSON（只維護這份）
+assets/
+  personal/              # Coursera 等個人資產
+  shared/                # 海報、沉浸式圖（兩邊可用）
+  company/               # logo、Datacenter 截圖、微信…
+apps/
+  personal/              # 個人站原始碼（靜態）
+  company/               # 公司站 Vite + React → dist/
+scripts/
+  build-personal.sh
+  build-company.sh
+  deploy-personal.sh
+  deploy-company.sh
+legacy/huhu-website/     # 舊靜態站（參考用；巨大 Keynote assets 已 gitignore）
 ```
 
-## GitHub Pages
+## 常用指令
 
-Repo name must be **`gumpcpy.github.io`** (user site).  
-Settings → Pages → Deploy from branch → `main` / `/ (root)`.
+```bash
+# 安裝（公司站依賴）
+npm install
 
-> Note: repo `gumpcpy` (exact username) is only for a **profile README** on github.com/gumpcpy — it is not this site.
+# 個人站
+npm run build:personal
+npm run preview:personal          # http://localhost:8080
+npm run deploy:personal -- "msg"  # 或 ./scripts/deploy-personal.sh "msg"
+
+# 公司站
+cp .env.company.example .env.company   # 填 SSH
+npm run dev:company                   # http://localhost:5173
+npm run build:company                 # → apps/company/dist
+npm run deploy:company                # rsync dist → server
+npm run deploy:company -- --dry-run   # 先預覽
+```
+
+### 公司站 `.env.company` 範例
+
+```bash
+COMPANY_SSH_HOST=user@your-server
+COMPANY_SSH_PATH=/var/www/huhu_site
+COMPANY_SSH_PORT=22
+# COMPANY_SSH_KEY=~/.ssh/id_ed25519
+```
+
+### GitHub Pages（個人站）
+
+Repo Settings → Pages → **Source = GitHub Actions**（不要再用 branch `/` root）。  
+推 `main` 後由 `.github/workflows/deploy-personal.yml` 建置 `dist-personal` 並發布。
+
+## 內容怎麼改
+
+| 要改什麼 | 改哪裡 |
+|----------|--------|
+| 個人作品 | `content/projects.json` |
+| 學習證書 | `content/learning.json` |
+| 公司服務／聯絡 | `content/company.json` |
+| 共用圖 | `assets/shared/` |
+| 公司圖 | `assets/company/` |
+| 證書圖 | `assets/personal/coursera/` |
+
+之後 React 公司站細節、個人站遷 React，都在 `apps/*` 裡做即可；部署腳本不用變。

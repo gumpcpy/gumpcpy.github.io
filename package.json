@@ -1,0 +1,18 @@
+{
+  "name": "gump-sites",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Personal catalogue + HuHu Tech company site (shared content/assets)",
+  "workspaces": [
+    "apps/company"
+  ],
+  "scripts": {
+    "dev:company": "bash scripts/build-company.sh --dev-prep && npm run dev -w apps/company",
+    "build:company": "bash scripts/build-company.sh",
+    "build:personal": "bash scripts/build-personal.sh",
+    "deploy:company": "bash scripts/deploy-company.sh",
+    "deploy:personal": "bash scripts/deploy-personal.sh",
+    "preview:personal": "bash scripts/build-personal.sh && python3 -m http.server 8080 --directory dist-personal",
+    "preview:company": "bash scripts/build-company.sh && npm run preview -w apps/company"
+  }
+}
