@@ -1,15 +1,26 @@
 const LANG_KEY = "catalogue-lang";
 const SUPPORTED = ["zh", "en"];
-const ASSET_VERSION = "20260720e";
+const ASSET_VERSION = "20260721c";
 
 const UI = {
   zh: {
-    eyebrow: "作品目錄 · 系統 · 產品",
-    viewApps: "查看 Apps",
-    github: "GitHub",
+    eyebrow: "作品目錄 · 個人簡歷",
+    menuOpen: "開啟選單",
+    menuClose: "關閉選單",
+    cta: {
+      aiHub: "AI 工作流集成",
+      immersive: "沉浸式實驗室",
+      apps: "應用程式 & 插件",
+      learning: "學習軌跡",
+      cv: "個人簡歷",
+    },
     learningNav: "學習軌跡",
     learningTitle: "學習軌跡",
     learningLead: "Coursera 學習軌跡與證書——課程、機構與驗證連結。",
+    cvNav: "個人簡歷",
+    cvTitle: "個人簡歷",
+    cvLead: "履歷、榮譽、演講與活動——內容整理中，稍後補上。",
+    cvEmpty: "內容即將上架。",
     viewCertificate: "查看證書 →",
     gradeLabel: "成績",
     expandLearning: (n) => `展開 ${n} 張證書`,
@@ -23,13 +34,24 @@ const UI = {
     loadError: "無法載入作品資料。",
   },
   en: {
-    eyebrow: "Catalogue · Systems · Products",
-    viewApps: "View apps",
-    github: "GitHub",
+    eyebrow: "Catalogue · CV & Events",
+    menuOpen: "Open menu",
+    menuClose: "Close menu",
+    cta: {
+      aiHub: "AI Hub",
+      immersive: "Immersive Lab",
+      apps: "Apps & Plugins",
+      learning: "Learning",
+      cv: "CV & Events",
+    },
     learningNav: "Learning",
     learningTitle: "Learning",
     learningLead:
       "Coursera learning journey and certificates—courses, institutions, and verification links.",
+    cvNav: "CV & Events",
+    cvTitle: "CV & Events",
+    cvLead: "CV, honors, talks, and events—coming soon.",
+    cvEmpty: "Content coming soon.",
     viewCertificate: "View certificate →",
     gradeLabel: "Grade",
     expandLearning: (n) => `Show ${n} certificates`,
@@ -93,17 +115,74 @@ function assetUrl(file) {
   return `./assets/coursera/${file}?v=${ASSET_VERSION}`;
 }
 
+function setNavOpen(open) {
+  const nav = document.querySelector(".nav");
+  const toggle = document.getElementById("nav-toggle");
+  if (!nav || !toggle) return;
+  nav.classList.toggle("is-open", open);
+  toggle.setAttribute("aria-expanded", String(open));
+  toggle.setAttribute("aria-label", open ? ui("menuClose") : ui("menuOpen"));
+}
+
+function closeNav() {
+  setNavOpen(false);
+}
+
 function renderNav(pillars) {
   const nav = document.getElementById("nav-links");
   nav.replaceChildren();
   for (const p of pillars) {
     const a = el("a", null, t(p.label));
     a.href = `#${p.id}`;
+    a.addEventListener("click", closeNav);
     nav.appendChild(a);
   }
   const learn = el("a", null, ui("learningNav"));
   learn.href = "#learning";
+  learn.addEventListener("click", closeNav);
   nav.appendChild(learn);
+  const cv = el("a", null, ui("cvNav"));
+  cv.href = "#cv-events";
+  cv.addEventListener("click", closeNav);
+  nav.appendChild(cv);
+}
+
+function bindNavToggle() {
+  const toggle = document.getElementById("nav-toggle");
+  if (!toggle || toggle.dataset.bound) return;
+  toggle.dataset.bound = "1";
+  toggle.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") === "true";
+    setNavOpen(!open);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeNav();
+  });
+  window.addEventListener(
+    "resize",
+    () => {
+      if (window.matchMedia("(min-width: 860px)").matches) closeNav();
+    },
+    { passive: true }
+  );
+}
+
+function renderHeroCtas() {
+  const row = document.getElementById("cta-row");
+  if (!row) return;
+  const items = [
+    { href: "#ai-hub", label: ui("cta").aiHub, primary: true },
+    { href: "#immersive", label: ui("cta").immersive },
+    { href: "#apps", label: ui("cta").apps },
+    { href: "#learning", label: ui("cta").learning },
+    { href: "#cv-events", label: ui("cta").cv },
+  ];
+  row.replaceChildren();
+  for (const item of items) {
+    const a = el("a", `btn ${item.primary ? "primary" : "ghost"}`, item.label);
+    a.href = item.href;
+    row.appendChild(a);
+  }
 }
 
 function renderCard(project) {
@@ -166,7 +245,7 @@ function renderPillars(data) {
 
     const grid = el("div", "card-grid");
     const items = data.projects.filter((p) => p.pillar === pillar.id);
-    if (pillar.id === "immersive" || items.length >= 3) {
+    if (pillar.id === "immersive" || pillar.id === "apps" || items.length >= 3) {
       grid.classList.add("cols-3");
     }
     for (const project of items) {
@@ -273,10 +352,18 @@ function applyPerson(person) {
   document.getElementById("person-name").textContent = name;
   document.getElementById("person-tagline").textContent = t(person.tagline);
   document.getElementById("person-about").textContent = t(person.about);
-  document.getElementById("github-link").href = person.github;
   const footerBrand = document.getElementById("footer-brand");
   if (footerBrand) footerBrand.textContent = name;
   document.title = `${name} — ${ui("catalogueTitle")}`;
+}
+
+function renderCvPlaceholder() {
+  const title = document.getElementById("cv-title");
+  if (title) title.textContent = ui("cvTitle");
+  const lead = document.getElementById("cv-lead");
+  if (lead) lead.textContent = ui("cvLead");
+  const list = document.getElementById("cv-list");
+  if (list) list.textContent = ui("cvEmpty");
 }
 
 function applyStaticUi() {
@@ -285,20 +372,15 @@ function applyStaticUi() {
   const eyebrow = document.getElementById("eyebrow");
   if (eyebrow) eyebrow.textContent = ui("eyebrow");
 
-  const viewApps = document.getElementById("cta-apps");
-  if (viewApps) viewApps.textContent = ui("viewApps");
-
-  const github = document.getElementById("github-link");
-  if (github) github.textContent = ui("github");
-
-  const ctaLearning = document.getElementById("cta-learning");
-  if (ctaLearning) ctaLearning.textContent = ui("learningNav");
+  renderHeroCtas();
 
   const learningTitle = document.getElementById("learning-title");
   if (learningTitle) learningTitle.textContent = ui("learningTitle");
 
   const footerNote = document.getElementById("footer-note");
   if (footerNote) footerNote.textContent = ui("footerNote");
+
+  renderCvPlaceholder();
 
   document.querySelectorAll("[data-lang]").forEach((btn) => {
     const active = btn.dataset.lang === lang;
@@ -315,6 +397,11 @@ function applyLanguage() {
     renderPillars(catalogueData);
   }
   if (learningData) renderLearning(learningData);
+  const toggle = document.getElementById("nav-toggle");
+  if (toggle) {
+    const open = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-label", open ? ui("menuClose") : ui("menuOpen"));
+  }
 }
 
 function bindLangToggle() {
@@ -326,6 +413,7 @@ function bindLangToggle() {
 async function boot() {
   lang = detectLang();
   bindLangToggle();
+  bindNavToggle();
   bindLearningToggle();
   applyStaticUi();
 

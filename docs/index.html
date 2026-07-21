@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260720e" />
+    <link rel="stylesheet" href="./styles.css?v=20260721d" />
   </head>
   <body>
     <div class="sky" aria-hidden="true"></div>
@@ -23,7 +23,21 @@
     <nav class="nav" aria-label="Primary">
       <a class="nav-brand" href="#top">gumpcpy</a>
       <div class="nav-end">
-        <div class="nav-links" id="nav-links"></div>
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-panel"
+          aria-label="選單"
+        >
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <div class="nav-panel" id="nav-panel">
+          <div class="nav-links" id="nav-links"></div>
+        </div>
         <div class="lang-switch" role="group" aria-label="Language">
           <button type="button" class="lang-btn" data-lang="zh" aria-pressed="true">中文</button>
           <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
@@ -36,17 +50,19 @@
       <h1 class="brand" id="person-name">CHEN PEIYU</h1>
       <p class="tagline" id="person-tagline"></p>
       <p class="lede" id="person-about"></p>
-      <div class="cta-row">
-        <a class="btn primary" id="cta-apps" href="#apps">查看 Apps</a>
-        <a class="btn ghost" id="github-link" href="https://github.com/gumpcpy" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn ghost" id="cta-learning" href="#learning">學習軌跡</a>
+      <div class="cta-row" id="cta-row">
+        <a class="btn primary" href="#ai-hub">AI Hub</a>
+        <a class="btn ghost" href="#immersive">Immersive Lab</a>
+        <a class="btn ghost" href="#apps">Apps &amp; Plugins</a>
+        <a class="btn ghost" href="#learning">Learning</a>
+        <a class="btn ghost" href="#cv-events">CV &amp; Events</a>
       </div>
     </header>
 
     <main id="catalogue"></main>
 
     <section class="section learning" id="learning">
-      <h2 id="learning-title">學習軌跡</h2>
+      <h2 id="learning-title">Learning</h2>
       <p class="section-lead" id="learning-lead">
         Coursera 學習軌跡與證書——課程、機構與驗證連結。
       </p>
@@ -62,11 +78,19 @@
       <div class="cert-list" id="learning-list" hidden></div>
     </section>
 
+    <section class="section cv-events" id="cv-events">
+      <h2 id="cv-title">CV &amp; Events</h2>
+      <p class="section-lead" id="cv-lead">
+        履歷、榮譽、演講與活動——內容整理中，稍後補上。
+      </p>
+      <div id="cv-list" class="cv-placeholder" aria-live="polite"></div>
+    </section>
+
     <footer class="footer">
       <p class="brand-sm" id="footer-brand">CHEN PEIYU</p>
       <p id="footer-note">個人作品目錄 · 持續新增</p>
     </footer>
 
-    <script src="./app.js?v=20260720e" type="module"></script>
+    <script src="./app.js?v=20260721c" type="module"></script>
   </body>
 </html>

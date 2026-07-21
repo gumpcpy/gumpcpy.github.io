@@ -33,8 +33,9 @@ legacy/huhu-website/     # 舊靜態站（參考用；巨大 Keynote assets 已 
 npm install
 
 # 個人站
+npm run dev:personal              # 不 build，靜態預覽 apps/personal + content → http://localhost:8080（改完請重整）
 npm run build:personal
-npm run preview:personal          # http://localhost:8080
+npm run preview:personal          # 建置後預覽 docs/ → http://localhost:8080
 npm run deploy:personal -- "msg"  # 或 ./scripts/deploy-personal.sh "msg"
 
 # 公司站

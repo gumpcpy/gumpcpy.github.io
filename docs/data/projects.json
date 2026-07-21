@@ -6,8 +6,8 @@
     },
     "handle": "gumpcpy",
     "tagline": {
-      "zh": "影視製作流程平台 · 沉浸式系統 · 解決方案",
-      "en": "Film production workflows platform · Immersive systems · Solutions"
+      "zh": "影視製作流程AI集成平台 · 沉浸式實驗室 · 應用程式 & 插件",
+      "en": "Film production workflows AI integration platform · Immersive systems · Apps & Plugins"
     },
     "about": {
       "zh": "擅長問題拆解與解決方案設計。十餘年橫跨影視製作與軟體工程。系統設計、產品開發、沉浸式互動與 AI 工作流。",
@@ -17,29 +17,29 @@
   },
   "pillars": [
     {
-      "id": "workflow",
+      "id": "ai-hub",
       "label": {
-        "zh": "AI 工作流",
-        "en": "AI Workflow Hub"
+        "zh": "AI 工作流集成",
+        "en": "AI Hub"
       },
       "title": {
-        "zh": "AI 工作流平台",
-        "en": "AI Workflow Hub"
+        "zh": "AI 工作流集成",
+        "en": "AI Hub"
       },
       "lead": {
-        "zh": "影視製作與檔案管理解決方案——把製作現場的流程、檔案與工具串成可運作的系統。",
-        "en": "Film production and asset management solutions—wiring on-set workflows, files, and tools into systems that actually run."
+        "zh": "資料驅動的影視製作系統和 pipeline 串接。包含 Datacenter、本地 AI 摘要與自然語言查找、OCR 分析，以及影視製作軟件插件整合。",
+        "en": "Data-driven film production systems and pipeline integration—including Datacenter, on-prem AI summarization and natural-language search, OCR analysis, and plugins for production software."
       }
     },
     {
       "id": "immersive",
       "label": {
-        "zh": "沉浸式",
-        "en": "Immersive"
+        "zh": "沉浸式實驗室",
+        "en": "Immersive Lab"
       },
       "title": {
-        "zh": "沉浸式實驗場",
-        "en": "Immersive Playground"
+        "zh": "沉浸式實驗室",
+        "en": "Immersive Lab"
       },
       "lead": {
         "zh": "線下沉浸式體驗系統——互動、敘事與現場工程的交會。",
@@ -49,51 +49,74 @@
     {
       "id": "apps",
       "label": {
-        "zh": "Apps",
-        "en": "Apps"
+        "zh": "應用程式 & 插件",
+        "en": "Apps & Plugins"
       },
       "title": {
-        "zh": "Apps",
-        "en": "Apps"
+        "zh": "應用程式 & 插件",
+        "en": "Apps & Plugins"
       },
       "lead": {
-        "zh": "產品型 iOS App——從體驗設計到後端與推播，端到端可運行。",
-        "en": "Product-shaped iOS apps—from experience design through backend and push, runnable end to end."
-      }
-    },
-    {
-      "id": "tools",
-      "label": {
-        "zh": "其他",
-        "en": "Other"
-      },
-      "title": {
-        "zh": "其他",
-        "en": "Other"
-      },
-      "lead": {
-        "zh": "小工具、Chrome 擴充與實驗——解決具體小問題的快速作品。",
-        "en": "Utilities, Chrome extensions, and experiments—quick work that solves concrete small problems."
+        "zh": "產品型 App、小工具與擴充——從體驗到後端，以及解決具體問題的快速作品。",
+        "en": "Product apps, utilities, and plugins—from experience to backend, plus quick tools for concrete problems."
       }
     }
   ],
   "projects": [
     {
-      "id": "ai-workflow-placeholder-1",
-      "pillar": "workflow",
+      "id": "datacenter",
+      "pillar": "ai-hub",
       "title": {
         "zh": "Datacenter®",
         "en": "Datacenter®"
       },
       "blurb": {
-        "zh": "影視製作／智能歸檔系統 / 整合插件。",
-        "en": "Film production / intelligent asset management system / integrated plugins."
+        "zh": "影視製作資料中樞——流程、檔案與工具的統一調度與串接。",
+        "en": "Production data hub—orchestrating workflows, files, and tools in one connected system."
       },
       "role": {
-        "zh": "系統設計 · 整合開發 · 工具",
-        "en": "System design · Integration · Tooling"
+        "zh": "系統設計 · 整合開發",
+        "en": "System design · Integration"
       },
-      "stack": ["Workflow", "Automation", "Integration"],
+      "stack": ["Workflow", "Pipeline", "Integration"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "smart-archive",
+      "pillar": "ai-hub",
+      "title": {
+        "zh": "Smart Archive",
+        "en": "Smart Archive"
+      },
+      "blurb": {
+        "zh": "AI NAS——本地端 AI 智能歸檔與查找系統。",
+        "en": "AI NAS—on-prem AI-powered smart archive and search."
+      },
+      "role": {
+        "zh": "本地 AI · 歸檔查找",
+        "en": "On-prem AI · Archive & search"
+      },
+      "stack": ["AI", "NAS", "NLP", "OCR"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "production-apps-plugins",
+      "pillar": "ai-hub",
+      "title": {
+        "zh": "影像製作 Apps & 插件",
+        "en": "Production Apps & Plugins"
+      },
+      "blurb": {
+        "zh": "可選工具：DaVinci Resolve 匯入／匯出圖表報表、自動挑條排程校驗拷貝、自動套片 App、OSS 權限管理。",
+        "en": "Optional tools: DaVinci Resolve import/export charts & reports, auto selects / schedule / verify / copy, auto conform app, and OSS permission management."
+      },
+      "role": {
+        "zh": "插件 · 自動化工具",
+        "en": "Plugins · Automation"
+      },
+      "stack": ["DaVinci Resolve", "Automation", "OSS"],
       "status": "coming",
       "links": {}
     },
@@ -174,21 +197,21 @@
       }
     },
     {
-      "id": "app-placeholder-2",
+      "id": "minimal-travel",
       "pillar": "apps",
       "title": {
-        "zh": "毅力表",
-        "en": "The Tenacity Table"
+        "zh": "極簡成功出行",
+        "en": "Minimal Travel Success"
       },
       "blurb": {
-        "zh": "毅力表——追蹤、記錄與激勵。",
-        "en": "The Tenacity Table—tracking, recording, and激励."
+        "zh": "本機 iOS App——自動整理上傳的照片與 PDF 預定行程單，以問答引導，結合老經驗旅者的 skill 教你行李怎麼帶，讓每一次出行都輕巧舒適。",
+        "en": "On-device iOS app—auto-organizes uploaded photos and PDF itineraries, guides you with Q&A, and packs traveler know-how so every trip stays light and comfortable."
       },
       "role": {
-        "zh": "iOS · 產品",
-        "en": "iOS · Product"
+        "zh": "iOS · 本機",
+        "en": "iOS · On-device"
       },
-      "stack": ["SwiftUI"],
+      "stack": ["SwiftUI", "On-device"],
       "status": "coming",
       "links": {}
     },
@@ -212,21 +235,40 @@
       "links": {}
     },
     {
-      "id": "tools-placeholder-1",
-      "pillar": "tools",
+      "id": "watermark-remover",
+      "pillar": "apps",
       "title": {
-        "zh": "小工具與擴充",
-        "en": "Utilities & extensions"
+        "zh": "去水印工具",
+        "en": "Watermark Remover"
       },
       "blurb": {
-        "zh": "小工具與 Chrome 擴充等（即將整理上架）。",
-        "en": "Utilities, Chrome extensions, and more (coming soon)."
+        "zh": "快速去除圖片／影片水印的小工具。",
+        "en": "A lightweight tool for removing watermarks from images and video."
       },
       "role": {
         "zh": "工具",
-        "en": "Tools"
+        "en": "Utility"
       },
-      "stack": ["JS", "Extensions"],
+      "stack": ["JS", "Media"],
+      "status": "coming",
+      "links": {}
+    },
+    {
+      "id": "photo-backup-guide",
+      "pillar": "apps",
+      "title": {
+        "zh": "照片備份指南",
+        "en": "Photo Backup Guide"
+      },
+      "blurb": {
+        "zh": "Electron 桌面應用——備份並整理 iPhone 照片。",
+        "en": "Electron desktop app—back up and organize photos from iPhone."
+      },
+      "role": {
+        "zh": "桌面 · Electron",
+        "en": "Desktop · Electron"
+      },
+      "stack": ["Electron", "iPhone", "Photos"],
       "status": "coming",
       "links": {}
     }

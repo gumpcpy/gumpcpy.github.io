@@ -10,6 +10,9 @@ node_modules/
 dist-personal/
 # docs/ is the published personal site (committed for GitHub Pages /docs)
 apps/company/dist/
+# Created by npm run dev:personal (symlinks into content/assets)
+apps/personal/data
+apps/personal/assets/
 apps/company/public/media/
 apps/company/public/content/
 apps/company/public/favicon.ico
