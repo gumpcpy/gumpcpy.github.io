@@ -51,5 +51,5 @@ else
 fi
 
 echo "✓ pushed $BRANCH → $REMOTE"
-echo "  Pages builds from dist-personal via GitHub Actions"
+echo "  Pages: Settings → Deploy from branch → main → /docs"
 echo "  https://gumpcpy.github.io/"
