@@ -4,7 +4,7 @@
 
 | 站點 | 網址 | 輸出 | 部署 |
 |------|------|------|------|
-| 個人 | https://gumpcpy.github.io/ | `dist-personal/` | GitHub Actions → Pages |
+| 個人 | https://gumpcpy.github.io/ | `docs/` | Pages：`main` → **/docs** |
 | 公司 | https://www.huhu-tech.com/ | `apps/company/dist/` | `rsync` → `/var/www/huhu_site` |
 
 ## 目錄
@@ -56,8 +56,13 @@ COMPANY_SSH_PORT=22
 
 ### GitHub Pages（個人站）
 
-Repo Settings → Pages → **Source = GitHub Actions**（不要再用 branch `/` root）。  
-推 `main` 後由 `.github/workflows/deploy-personal.yml` 建置 `dist-personal` 並發布。
+1. 本地或 CI 執行 `npm run build:personal` → 產出 `docs/`
+2. Repo Settings → Pages → **Deploy from a branch**
+   - Branch: `main`
+   - Folder: **/docs**（不要選 root `/`）
+3. 儲存後等 1～2 分鐘：https://gumpcpy.github.io/
+
+（可選）Source 若設成 GitHub Actions，會用 workflow 上傳同一個 `docs/` 產物。）
 
 ## 內容怎麼改
 

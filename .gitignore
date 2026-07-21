@@ -8,6 +8,7 @@ github_site/
 # Dependencies & build outputs
 node_modules/
 dist-personal/
+# docs/ is the published personal site (committed for GitHub Pages /docs)
 apps/company/dist/
 apps/company/public/media/
 apps/company/public/content/

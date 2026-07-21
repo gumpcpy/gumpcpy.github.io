@@ -1,5 +1,7 @@
 name: Deploy personal site
 
+# Prefer Settings → Pages → Deploy from branch → main → /docs
+# This workflow is a backup if Source is set to GitHub Actions.
 on:
   push:
     branches: [main]
@@ -23,7 +25,8 @@ jobs:
         run: bash scripts/build-personal.sh
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist-personal
+          # Upload the assembled site (same as docs/)
+          path: docs
 
   deploy:
     needs: build

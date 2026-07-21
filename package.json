@@ -12,7 +12,7 @@
     "build:personal": "bash scripts/build-personal.sh",
     "deploy:company": "bash scripts/deploy-company.sh",
     "deploy:personal": "bash scripts/deploy-personal.sh",
-    "preview:personal": "bash scripts/build-personal.sh && python3 -m http.server 8080 --directory dist-personal",
+    "preview:personal": "bash scripts/build-personal.sh && python3 -m http.server 8080 --directory docs",
     "preview:company": "bash scripts/build-company.sh && npm run preview -w apps/company"
   }
 }
