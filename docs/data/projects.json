@@ -98,8 +98,11 @@
         "en": "On-prem AI · Archive & search"
       },
       "stack": ["AI", "NAS", "NLP", "OCR"],
-      "status": "coming",
-      "links": {}
+      "status": "live",
+      "links": {
+        "site": "https://gumpcpy.github.io/smart-archive-intro/",
+        "repo": "https://github.com/gumpcpy/smart-archive-intro"
+      }
     },
     {
       "id": "production-apps-plugins",

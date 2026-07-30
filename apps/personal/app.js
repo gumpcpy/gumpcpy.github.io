@@ -1,8 +1,8 @@
 const LANG_KEY = "catalogue-lang";
 const SUPPORTED = ["zh", "en"];
-const ASSET_VERSION = "20260721f";
+const ASSET_VERSION = "20260730a";
 /** Site content last updated (YYYY-MM-DD). Bump when publishing content changes. */
-const UPDATED_AT = "2026-07-21";
+const UPDATED_AT = "2026-07-30";
 
 const UI = {
   zh: {
