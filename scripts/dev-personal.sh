@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
-# Serve apps/personal directly (no build). Symlinks content/assets into place.
+# Build personal site (incl. library MD) and serve docs/ for local preview.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-PERSONAL="$ROOT/apps/personal"
-PORT="${PORT:-8080}"
+PORT="${PORT:-8090}"
 
-mkdir -p "$PERSONAL/assets"
-ln -sfn "$ROOT/content" "$PERSONAL/data"
-ln -sfn "$ROOT/assets/personal/coursera" "$PERSONAL/assets/coursera"
+bash "$ROOT/scripts/build-personal.sh"
 
-cd "$PERSONAL"
-echo "Personal site (no build) → http://localhost:${PORT}/"
-echo "Editing apps/personal or content/ — refresh the browser to see changes."
-exec python3 -m http.server "$PORT"
+cd "$ROOT"
+echo "Personal site → http://localhost:${PORT}/  (serves docs/; rebuild after MD edits)"
+exec python3 -m http.server "$PORT" --directory docs

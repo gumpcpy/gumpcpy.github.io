@@ -183,7 +183,10 @@
     {
       "id": "i-got-you",
       "pillar": "apps",
-      "title": "I Got You",
+      "title": {
+        "zh": "I Got You",
+        "en": "I Got You"
+      },
       "blurb": {
         "zh": "語音陪伴與互助平台——原生 iOS、即時語音、點數帳本與多語言。",
         "en": "Voice companionship and mutual-aid platform—native iOS, realtime voice, points ledger, and multilingual."

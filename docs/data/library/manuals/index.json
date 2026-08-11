@@ -1,0 +1,31 @@
+{
+  "section": "manuals",
+  "items": [
+    {
+      "slug": "bare-human-capability-camp",
+      "title": {
+        "zh": "裸人：現代人生存能力訓練營",
+        "en": "Bare Human: The Handbook of Human Capability"
+      },
+      "summary": {
+        "zh": "不是為了成為軍人，而是培養在任何地方都能安心活下去的人——一套面對未知的能力與態度。",
+        "en": "Not to make soldiers, but people who can live calmly anywhere—capability and attitude for the unknown."
+      },
+      "date": "2026-08-05",
+      "section": "manuals"
+    },
+    {
+      "slug": "low-friction-travel-system",
+      "title": {
+        "zh": "低摩擦旅行系統",
+        "en": "Low-Friction Travel System"
+      },
+      "summary": {
+        "zh": "一套重複可用的低摩擦旅行系統——保持空間餘裕、降低操作成本、優化身體狀態。",
+        "en": "A reusable low-friction travel system—spare capacity, fewer operations, better body state."
+      },
+      "date": "2026-07-29",
+      "section": "manuals"
+    }
+  ]
+}
