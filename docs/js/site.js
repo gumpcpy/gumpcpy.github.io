@@ -1,7 +1,7 @@
 export const LANG_KEY = "catalogue-lang";
 export const THEME_KEY = "catalogue-theme";
 export const SUPPORTED = ["zh", "en"];
-export const ASSET_VERSION = "20260811g";
+export const ASSET_VERSION = "20260811h";
 export const UPDATED_AT = "2026-08-11";
 
 export const SITE_NAV = [
@@ -71,6 +71,9 @@ export const UI = {
     libraryBack: "← 返回目錄",
     libraryToc: "本篇目錄",
     libraryArticles: "文章目錄",
+    libraryCrumb: "目前位置",
+    libraryPrev: "上一篇",
+    libraryNext: "下一篇",
     siteTree: "站點目錄",
     aboutEyebrow: "關於",
     aboutTitle: "關於",
@@ -117,6 +120,9 @@ export const UI = {
     libraryBack: "← Back to index",
     libraryToc: "On this page",
     libraryArticles: "Articles",
+    libraryCrumb: "You are here",
+    libraryPrev: "Previous",
+    libraryNext: "Next",
     siteTree: "Site map",
     aboutEyebrow: "About",
     aboutTitle: "About",

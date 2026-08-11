@@ -40,6 +40,62 @@ function articleHref(sectionId, slug) {
   return `${sectionMeta(sectionId).href}?id=${encodeURIComponent(slug)}`;
 }
 
+function buildBreadcrumb(sectionId, item) {
+  const meta = sectionMeta(sectionId);
+  const nav = el("nav", "library-crumb");
+  nav.setAttribute("aria-label", ui("libraryCrumb"));
+
+  const home = el("a", null, ui("libraryTitle"));
+  home.href = "/library/";
+  nav.appendChild(home);
+  nav.appendChild(el("span", "crumb-sep", "/"));
+
+  const section = el("a", null, t(meta.label));
+  section.href = meta.href;
+  nav.appendChild(section);
+  nav.appendChild(el("span", "crumb-sep", "/"));
+
+  nav.appendChild(el("span", "crumb-current", t(item.title)));
+  return nav;
+}
+
+function buildArticlePager(items, sectionId, slug) {
+  const idx = items.findIndex((x) => x.slug === slug);
+  const prev = idx > 0 ? items[idx - 1] : null;
+  const next = idx >= 0 && idx < items.length - 1 ? items[idx + 1] : null;
+
+  const nav = el("nav", "article-pager");
+  nav.setAttribute("aria-label", `${ui("libraryPrev")} / ${ui("libraryNext")}`);
+
+  if (prev) {
+    const a = el("a", "pager-prev");
+    a.href = articleHref(sectionId, prev.slug);
+    a.appendChild(el("span", "pager-label", ui("libraryPrev")));
+    a.appendChild(el("span", "pager-title", t(prev.title)));
+    nav.appendChild(a);
+  } else {
+    const span = el("span", "pager-prev is-disabled");
+    span.appendChild(el("span", "pager-label", ui("libraryPrev")));
+    span.appendChild(el("span", "pager-title", "—"));
+    nav.appendChild(span);
+  }
+
+  if (next) {
+    const a = el("a", "pager-next");
+    a.href = articleHref(sectionId, next.slug);
+    a.appendChild(el("span", "pager-label", ui("libraryNext")));
+    a.appendChild(el("span", "pager-title", t(next.title)));
+    nav.appendChild(a);
+  } else {
+    const span = el("span", "pager-next is-disabled");
+    span.appendChild(el("span", "pager-label", ui("libraryNext")));
+    span.appendChild(el("span", "pager-title", "—"));
+    nav.appendChild(span);
+  }
+
+  return nav;
+}
+
 function buildHeadingToc(articleEl) {
   const headings = [...articleEl.querySelectorAll("h2, h3")];
   const toc = el("nav", "article-toc");
@@ -110,6 +166,7 @@ async function renderSectionPage(sectionId) {
   const items = index.items || [];
 
   if (!slug) {
+    document.body.classList.remove("is-reading");
     root.className = "library-list-view";
     root.replaceChildren();
     if (!items.length) {
@@ -138,6 +195,7 @@ async function renderSectionPage(sectionId) {
     { cache: "no-cache" }
   );
   if (!htmlRes.ok || !item) {
+    document.body.classList.remove("is-reading");
     root.className = "library-list-view";
     root.replaceChildren(el("p", "library-empty", ui("readError")));
     applyChrome({ activeNav: "library", title: t(meta.label) });
@@ -145,6 +203,7 @@ async function renderSectionPage(sectionId) {
   }
 
   const bodyHtml = await htmlRes.text();
+  document.body.classList.add("is-reading");
   root.className = "library-reader";
   root.replaceChildren();
 
@@ -155,6 +214,7 @@ async function renderSectionPage(sectionId) {
   sidebar.appendChild(renderArticleList(items, sectionId, slug));
 
   const main = el("div", "library-main");
+  main.appendChild(buildBreadcrumb(sectionId, item));
   main.appendChild(el("h1", "article-title", t(item.title)));
   if (item.date) main.appendChild(el("p", "meta", item.date));
   const article = el("article", "article-body prose");
@@ -162,6 +222,7 @@ async function renderSectionPage(sectionId) {
   const toc = buildHeadingToc(article);
   sidebar.appendChild(toc);
   main.appendChild(article);
+  main.appendChild(buildArticlePager(items, sectionId, slug));
 
   root.appendChild(sidebar);
   root.appendChild(main);
