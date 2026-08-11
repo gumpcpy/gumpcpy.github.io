@@ -5,6 +5,9 @@
 .env.company
 github_site/
 
+# Large local-only media (not for Pages)
+assets/personal/speech/
+
 # Dependencies & build outputs
 node_modules/
 dist-personal/
