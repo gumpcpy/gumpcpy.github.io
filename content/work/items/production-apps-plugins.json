@@ -1,0 +1,45 @@
+{
+  "id": "production-apps-plugins",
+  "group": "work",
+  "category": "film-tech",
+  "title": {
+    "zh": "Plugins",
+    "en": "Plugins"
+  },
+  "blurb": {
+    "zh": "影像製作插件與自動化工具。",
+    "en": "Production plugins and automation tools."
+  },
+  "status": "coming",
+  "ready": false,
+  "links": {},
+  "media": [],
+  "sections": {
+    "problem": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "idea": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "method": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "system": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "demo": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming.",
+      "url": ""
+    },
+    "notes": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    }
+  },
+  "updatedAt": "2026-04-15"
+}

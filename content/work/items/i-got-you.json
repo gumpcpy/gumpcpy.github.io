@@ -1,0 +1,77 @@
+{
+  "id": "i-got-you",
+  "group": "work",
+  "category": "applications",
+  "title": {
+    "zh": "I Got You",
+    "en": "I Got You"
+  },
+  "blurb": {
+    "zh": "語音陪伴與互助平台——原生 iOS、即時語音、點數帳本與多語言。",
+    "en": "Voice companionship and mutual-aid platform—native iOS, realtime voice, points ledger, and multilingual."
+  },
+  "status": "live",
+  "ready": true,
+  "links": {
+    "repo": "https://github.com/gumpcpy/i-got-you"
+  },
+  "hero": {
+    "zh": "/assets/work/i-got-you/hero/zh.png",
+    "en": "/assets/work/i-got-you/hero/en.png"
+  },
+  "sections": {
+    "problem": {
+      "hideTitle": true,
+      "zh": "你是否曾在獨自差旅的夜晚感到害怕，想找人陪伴？\n你是否身為長期照護者，滿腹辛酸卻找不到同類人訴說。",
+      "en": "Have you ever felt afraid alone on a night of business travel—and wished someone were with you?\nAre you a long-term caregiver, full of hard-won feelings, yet unable to find people like you to talk to?"
+    },
+    "idea": {
+      "zh": "",
+      "en": "",
+      "bullets": {
+        "zh": [
+          "有時候不想一個人待著，也不想找朋友聊天，就只是想看看這個世界上有誰也醒著，跟我一起搭上午夜行駛的列車，在搖搖晃晃的規律裡睡著。",
+          "有時候需要的，不是治療或輔導，只是找到同類可以一起待一待，想聽就聽、想說就說。",
+          "所以想設計兩種功能：陪伴群與互助群。陪伴群讓你隨時找到無負擔的輕陪伴；互助群則透過引導，大家每週固定一個時段，隨意聊一聊。"
+        ],
+        "en": [
+          "Sometimes I don’t want to be alone, and I don’t want to call a friend either—I just want to see who else is awake in the world, riding the midnight train with me, falling asleep in that rocking rhythm.",
+          "Sometimes what’s needed isn’t therapy or counseling—just finding people like you to sit with, listen if you want, speak if you want.",
+          "So I designed two features: Companion and Mutual Aid. Companion lets you find light, no-burden company anytime; Mutual Aid gently gathers everyone each week at a fixed hour to talk freely."
+        ]
+      }
+    },
+    "method": {
+      "zh": "用你的小分身陪伴你搭上午夜列車，或在深夜的集裝箱上安靜坐著——有距離的陪伴。\n匿名但固定的小群組，和你有一樣的美麗與哀愁——有隱私的暢聊。",
+      "en": "Let your little avatar ride the midnight train with you, or sit quietly on a late-night container—companionship with distance.\nAnonymous yet steady small groups who share your beauty and sorrow—private, open talk."
+    },
+    "system": {
+      "zh": "產品截圖與程式碼倉庫。",
+      "en": "Product screenshots and source repository.",
+      "downloadUrl": "",
+      "screenshots": {
+        "zh": [
+          "/assets/work/i-got-you/screens/zh/01.png",
+          "/assets/work/i-got-you/screens/zh/02.png",
+          "/assets/work/i-got-you/screens/zh/03.png",
+          "/assets/work/i-got-you/screens/zh/04.png",
+          "/assets/work/i-got-you/screens/zh/05.png",
+          "/assets/work/i-got-you/screens/zh/06.png"
+        ],
+        "en": [
+          "/assets/work/i-got-you/screens/en/01.png",
+          "/assets/work/i-got-you/screens/en/02.png",
+          "/assets/work/i-got-you/screens/en/03.png",
+          "/assets/work/i-got-you/screens/en/04.png",
+          "/assets/work/i-got-you/screens/en/05.png",
+          "/assets/work/i-got-you/screens/en/06.png"
+        ]
+      }
+    },
+    "notes": {
+      "zh": "這是第一款我為自己的需要而做的 app。有時候我只希望能簡單地操作，安全地感受到陪伴；有時候我希望有固定的小團體，可以一起談一談單親媽媽的故作堅強，聊一聊末日生存狂想到的撤離新方法。\n創作途中的思考：多少才會剛好？兩小時。數字分身。兩種陪伴模式——文字與場景搭配背景音樂；語音與主題搭配主持。",
+      "en": "This is the first app I built for my own need. Sometimes I only want a simple, safe sense of company; sometimes I want a steady small circle—to talk about the forced strength of single mothers, or the new exit plans dreamed up by doomsday preppers.\nNotes from making it: how much is just enough? Two hours. A digital avatar. Two companion modes—text and scene with ambient music; voice and themed hosting."
+    }
+  },
+  "updatedAt": "2026-09-15"
+}

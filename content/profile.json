@@ -1,0 +1,52 @@
+{
+  "lead": {
+    "zh": "經歷、演講、證明與聯繫方式。",
+    "en": "Experience, talks, credentials, and contact."
+  },
+  "sections": {
+    "experience": {
+      "label": {
+        "zh": "經歷",
+        "en": "Experience"
+      },
+      "lead": {
+        "zh": "工作經歷整理中。",
+        "en": "Work experience forthcoming."
+      },
+      "items": []
+    },
+    "talks": {
+      "label": {
+        "zh": "演講／分享",
+        "en": "Talks / Presentations"
+      },
+      "lead": {
+        "zh": "演講與公開分享整理中。",
+        "en": "Talks and presentations forthcoming."
+      },
+      "items": []
+    },
+    "certifications": {
+      "label": {
+        "zh": "證明",
+        "en": "Credentials"
+      },
+      "lead": {
+        "zh": "Coursera 學習軌跡與證書——課程、機構與驗證連結。",
+        "en": "Coursera certificates—courses, institutions, and verification links."
+      },
+      "source": "learning.json"
+    },
+    "patents": {
+      "label": {
+        "zh": "專利／智財",
+        "en": "Patents / IP"
+      },
+      "lead": {
+        "zh": "專利與智財整理中。",
+        "en": "Patents and IP forthcoming."
+      },
+      "items": []
+    }
+  }
+}

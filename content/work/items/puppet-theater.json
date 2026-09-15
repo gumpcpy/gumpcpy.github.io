@@ -1,0 +1,45 @@
+{
+  "id": "puppet-theater",
+  "group": "work",
+  "category": "immersive",
+  "title": {
+    "zh": "傀儡劇場",
+    "en": "Puppet Theater"
+  },
+  "blurb": {
+    "zh": "沉浸式體驗劇場——互動、敘事與現場工程的交會。",
+    "en": "Immersive experience theater—where interaction, narrative, and live engineering meet."
+  },
+  "status": "coming",
+  "ready": false,
+  "links": {},
+  "media": [],
+  "sections": {
+    "problem": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "idea": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "method": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "system": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "demo": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming.",
+      "url": ""
+    },
+    "notes": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    }
+  },
+  "updatedAt": "2026-07-01"
+}

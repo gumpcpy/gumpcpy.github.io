@@ -1,0 +1,45 @@
+{
+  "id": "photo-backup-guide",
+  "group": "work",
+  "category": "applications",
+  "title": {
+    "zh": "照片備份指南",
+    "en": "Photo Backup Guide"
+  },
+  "blurb": {
+    "zh": "Electron 桌面應用——備份並整理 iPhone 照片。",
+    "en": "Electron desktop app—back up and organize photos from iPhone."
+  },
+  "status": "coming",
+  "ready": false,
+  "links": {},
+  "media": [],
+  "sections": {
+    "problem": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "idea": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "method": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "system": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "demo": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming.",
+      "url": ""
+    },
+    "notes": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    }
+  },
+  "updatedAt": "2026-05-18"
+}

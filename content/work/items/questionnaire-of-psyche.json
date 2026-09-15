@@ -1,0 +1,68 @@
+{
+  "id": "questionnaire-of-psyche",
+  "group": "work",
+  "category": "immersive",
+  "title": {
+    "zh": "賽姬的問卷",
+    "en": "The Questionnaire of Psyche"
+  },
+  "blurb": {
+    "zh": "在沈默中尋找共鳴，在同一個空間裡探索彼此的內心世界。",
+    "en": "Find共鸣 in silence, explore each other's inner worlds in the same space."
+  },
+  "status": "live",
+  "ready": true,
+  "links": {
+    "repo": "https://github.com/gumpcpy/pt-sync"
+  },
+  "hero": {
+    "zh": "/assets/work/questionnaire-of-psyche/hero/zh.png",
+    "en": "/assets/work/questionnaire-of-psyche/hero/en.png"
+  },
+  "sections": {
+    "problem": {
+      "hideTitle": true,
+      "zh": "明明也想認識新朋友，但是又不想一下子靠得太近，想了解對方又缺少一個適合的切入點。",
+      "en": "I want to make new friends, but I don't want to get too close too fast. I want to know someone, but I don't know how to start a conversation."
+    },
+
+    "method": {
+      "zh": "想讓大家在輕鬆優雅的環境裡，用有趣的主題，直擊靈魂的問題，自在地探索自己內心世界，並經過演算法找到同類。\n主持人可以隨時暫停，讓大家對彼此好奇的題目有更多時間討論",
+      "en": "Want to let everyone explore their inner world, ask deep questions, and find like-minded people through an algorithm.\nThe host can pause at any time to let everyone discuss the questions they are curious about."
+    },
+    "system": {
+      "zh": "現場紀錄與系統說明。",
+      "en": "Field documentation and system notes.",
+      "downloadUrl": "",
+      "screenshots": {
+        "zh": [
+          "/assets/work/questionnaire-of-psyche/screens/zh/01.png",
+          "/assets/work/questionnaire-of-psyche/screens/zh/02.png",
+          "/assets/work/questionnaire-of-psyche/screens/zh/03.png",
+          "/assets/work/questionnaire-of-psyche/screens/zh/04.png",
+          "/assets/work/questionnaire-of-psyche/screens/zh/05.png",
+          "/assets/work/questionnaire-of-psyche/screens/zh/06.png",
+          "/assets/work/questionnaire-of-psyche/screens/zh/07.png",
+          "/assets/work/questionnaire-of-psyche/screens/zh/08.png",
+          "/assets/work/questionnaire-of-psyche/screens/zh/09.png"
+        ],
+        "en": [
+          "/assets/work/questionnaire-of-psyche/screens/en/01.png",
+          "/assets/work/questionnaire-of-psyche/screens/en/02.png",
+          "/assets/work/questionnaire-of-psyche/screens/en/03.png",
+          "/assets/work/questionnaire-of-psyche/screens/en/04.png",
+          "/assets/work/questionnaire-of-psyche/screens/en/05.png",
+          "/assets/work/questionnaire-of-psyche/screens/en/06.png",
+          "/assets/work/questionnaire-of-psyche/screens/en/07.png",
+          "/assets/work/questionnaire-of-psyche/screens/en/08.png",
+          "/assets/work/questionnaire-of-psyche/screens/en/09.png"
+        ]
+      }
+    },
+    "notes": {
+      "zh": "後台要可以隨時可以增加新的主題和問題，\n活動可以符合隨機的陌生人或者展場同好，或者特定訂製主題場次。\n所以要能有彈性，可以讓每個主持的團隊方便操作使用",
+      "en": "The backend should be able to add new topics and questions at any time.\nThe event can be for random strangers, exhibition attendees, or specific themed sessions.\nSo it needs to be flexible, allowing each hosting team to easily operate and use."
+    }
+  },
+  "updatedAt": "2026-09-15"
+}

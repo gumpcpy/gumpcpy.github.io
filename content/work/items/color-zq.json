@@ -1,0 +1,53 @@
+{
+  "id": "color-zq",
+  "group": "selected",
+  "category": "color-grading",
+  "title": {
+    "zh": "追球",
+    "en": "Chase the Ball"
+  },
+  "blurb": {
+    "zh": "調色案例：追球——需求、難點、方法與效果整理中。",
+    "en": "Color grading case: Chase the Ball—problem, constraints, method, and look forthcoming."
+  },
+  "status": "coming",
+  "ready": false,
+  "links": {},
+  "media": [
+    {
+      "src": "/assets/shared/posters/zq.jpg",
+      "alt": {
+        "zh": "追球",
+        "en": "Chase the Ball"
+      }
+    }
+  ],
+  "sections": {
+    "problem": {
+      "zh": "本案的調色需求與制約條件整理中。",
+      "en": "Grading needs and constraints for this title—forthcoming."
+    },
+    "idea": {
+      "zh": "對題材與影像語言的理解整理中。",
+      "en": "How the material and image language were read—forthcoming."
+    },
+    "method": {
+      "zh": "調色流程與方法整理中。",
+      "en": "Grading pipeline and method—forthcoming."
+    },
+    "system": {
+      "zh": "實際交付的色彩效果與技術設定整理中。",
+      "en": "Delivered look and technical setup—forthcoming."
+    },
+    "demo": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming.",
+      "url": ""
+    },
+    "notes": {
+      "zh": "過程筆記整理中。",
+      "en": "Process notes—forthcoming."
+    }
+  },
+  "updatedAt": "2025-01-01"
+}

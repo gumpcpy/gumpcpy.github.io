@@ -1,0 +1,45 @@
+{
+  "id": "zookly",
+  "group": "systems",
+  "category": "applications",
+  "title": {
+    "zh": "Zookly",
+    "en": "Zookly"
+  },
+  "blurb": {
+    "zh": "輕量陪伴數位替身 App——輕量陪伴、數位替身與情感支持。",
+    "en": "Lightweight companion digital surrogate app—companionship, digital surrogate, and emotional support."
+  },
+  "status": "coming",
+  "ready": false,
+  "links": {},
+  "media": [],
+  "sections": {
+    "problem": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "idea": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "method": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "system": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "demo": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming.",
+      "url": ""
+    },
+    "notes": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    }
+  },
+  "updatedAt": "2025-01-01"
+}

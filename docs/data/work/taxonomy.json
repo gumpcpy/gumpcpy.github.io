@@ -1,0 +1,81 @@
+{
+  "categories": [
+    {
+      "id": "ai",
+      "label": {
+        "zh": "AI",
+        "en": "AI"
+      },
+      "lead": {
+        "zh": "本地端 AI 與智能歸檔。",
+        "en": "On-prem AI and smart archive."
+      },
+      "itemIds": [
+        "smart-archive"
+      ]
+    },
+    {
+      "id": "immersive",
+      "label": {
+        "zh": "沈浸式體驗開發",
+        "en": "Immersive Experience"
+      },
+      "lead": {
+        "zh": "線下沉浸式體驗——互動、敘事與現場工程。",
+        "en": "Offline immersive—interaction, narrative, live engineering."
+      },
+      "itemIds": [
+        "puppet-theater",
+        "test-of-aphrodite",
+        "questionnaire-of-psyche"
+      ]
+    },
+    {
+      "id": "applications",
+      "label": {
+        "zh": "應用程式",
+        "en": "Applications"
+      },
+      "lead": {
+        "zh": "產品型 App 與工具。",
+        "en": "Product apps and tools."
+      },
+      "itemIds": [
+        "i-got-you",
+        "minimal-travel",
+        "photo-backup-guide"
+      ]
+    },
+    {
+      "id": "film-tech",
+      "label": {
+        "zh": "影像技術",
+        "en": "Film Technology"
+      },
+      "lead": {
+        "zh": "影視製作資料中樞與插件工具鏈。",
+        "en": "Production data hub and plugin toolchain."
+      },
+      "itemIds": [
+        "datacenter",
+        "production-apps-plugins"
+      ]
+    },
+    {
+      "id": "color-grading",
+      "label": {
+        "zh": "調光選例",
+        "en": "Color Cases"
+      },
+      "lead": {
+        "zh": "調光調色精選案例。",
+        "en": "Selected color grading cases."
+      },
+      "itemIds": [
+        "color-ykq",
+        "color-xms2",
+        "color-ssy"
+      ]
+    }
+  ]
+}

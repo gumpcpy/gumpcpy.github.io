@@ -1,0 +1,196 @@
+{
+  "items": [
+    {
+      "id": "smart-archive",
+      "group": "work",
+      "category": "ai",
+      "title": {
+        "zh": "Smart Archive",
+        "en": "Smart Archive"
+      },
+      "blurb": {
+        "zh": "AI NAS——本地端 AI 智能歸檔與查找系統。",
+        "en": "AI NAS—on-prem AI-powered smart archive and search."
+      },
+      "status": "live",
+      "updatedAt": "2026-08-20",
+      "ready": false
+    },
+    {
+      "id": "puppet-theater",
+      "group": "work",
+      "category": "immersive",
+      "title": {
+        "zh": "傀儡劇場",
+        "en": "Puppet Theater"
+      },
+      "blurb": {
+        "zh": "沉浸式體驗劇場——互動、敘事與現場工程的交會。",
+        "en": "Immersive experience theater—where interaction, narrative, and live engineering meet."
+      },
+      "status": "coming",
+      "updatedAt": "2026-07-01",
+      "ready": false
+    },
+    {
+      "id": "test-of-aphrodite",
+      "group": "work",
+      "category": "immersive",
+      "title": {
+        "zh": "阿芙洛狄特的考驗",
+        "en": "The Test of Aphrodite"
+      },
+      "blurb": {
+        "zh": "沉浸式體驗劇場——互動、敘事與現場工程的交會。",
+        "en": "Immersive experience theater—where interaction, narrative, and live engineering meet."
+      },
+      "status": "coming",
+      "updatedAt": "2026-07-02",
+      "ready": false
+    },
+    {
+      "id": "questionnaire-of-psyche",
+      "group": "work",
+      "category": "immersive",
+      "title": {
+        "zh": "賽姬的問卷",
+        "en": "The Questionnaire of Psyche"
+      },
+      "blurb": {
+        "zh": "在沈默中尋找共鳴，在同一個空間裡探索彼此的內心世界。",
+        "en": "Find共鸣 in silence, explore each other's inner worlds in the same space."
+      },
+      "status": "live",
+      "updatedAt": "2026-09-15",
+      "ready": true
+    },
+    {
+      "id": "i-got-you",
+      "group": "work",
+      "category": "applications",
+      "title": {
+        "zh": "I Got You",
+        "en": "I Got You"
+      },
+      "blurb": {
+        "zh": "語音陪伴與互助平台——原生 iOS、即時語音、點數帳本與多語言。",
+        "en": "Voice companionship and mutual-aid platform—native iOS, realtime voice, points ledger, and multilingual."
+      },
+      "status": "live",
+      "updatedAt": "2026-09-15",
+      "ready": true
+    },
+    {
+      "id": "minimal-travel",
+      "group": "work",
+      "category": "applications",
+      "title": {
+        "zh": "低摩擦出行",
+        "en": "Low-Friction Travel"
+      },
+      "blurb": {
+        "zh": "本機 iOS App——自動整理上傳的照片與 PDF 預定行程單，以問答引導，結合老經驗旅者的 skill 教你行李怎麼帶。",
+        "en": "On-device iOS app—auto-organizes uploaded photos and PDF itineraries, guides you with Q&A, and packs traveler know-how."
+      },
+      "status": "coming",
+      "updatedAt": "2026-06-10",
+      "ready": false
+    },
+    {
+      "id": "photo-backup-guide",
+      "group": "work",
+      "category": "applications",
+      "title": {
+        "zh": "照片備份指南",
+        "en": "Photo Backup Guide"
+      },
+      "blurb": {
+        "zh": "Electron 桌面應用——備份並整理 iPhone 照片。",
+        "en": "Electron desktop app—back up and organize photos from iPhone."
+      },
+      "status": "coming",
+      "updatedAt": "2026-05-18",
+      "ready": false
+    },
+    {
+      "id": "datacenter",
+      "group": "work",
+      "category": "film-tech",
+      "title": {
+        "zh": "Datacenter®",
+        "en": "Datacenter®"
+      },
+      "blurb": {
+        "zh": "影視製作資料中樞——流程、檔案與工具的統一調度與串接。",
+        "en": "Production data hub—orchestrating workflows, files, and tools in one connected system."
+      },
+      "status": "coming",
+      "updatedAt": "2026-04-12",
+      "ready": false
+    },
+    {
+      "id": "production-apps-plugins",
+      "group": "work",
+      "category": "film-tech",
+      "title": {
+        "zh": "Plugins",
+        "en": "Plugins"
+      },
+      "blurb": {
+        "zh": "影像製作插件與自動化工具。",
+        "en": "Production plugins and automation tools."
+      },
+      "status": "coming",
+      "updatedAt": "2026-04-15",
+      "ready": false
+    },
+    {
+      "id": "color-ykq",
+      "group": "work",
+      "category": "color-grading",
+      "title": {
+        "zh": "夜孔雀",
+        "en": "Night Peacock"
+      },
+      "blurb": {
+        "zh": "調色案例：夜孔雀——需求、難點、方法與效果整理中。",
+        "en": "Color grading case: Night Peacock—problem, constraints, method, and look forthcoming."
+      },
+      "status": "coming",
+      "updatedAt": "2026-03-01",
+      "ready": false
+    },
+    {
+      "id": "color-xms2",
+      "group": "work",
+      "category": "color-grading",
+      "title": {
+        "zh": "小门神",
+        "en": "Little Door Gods 2"
+      },
+      "blurb": {
+        "zh": "調色案例：小门神——需求、難點、方法與效果整理中。",
+        "en": "Color grading case: Little Door Gods 2—problem, constraints, method, and look forthcoming."
+      },
+      "status": "coming",
+      "updatedAt": "2026-03-02",
+      "ready": false
+    },
+    {
+      "id": "color-ssy",
+      "group": "work",
+      "category": "color-grading",
+      "title": {
+        "zh": "三少爷的剑",
+        "en": "Sword Master"
+      },
+      "blurb": {
+        "zh": "調色案例：三少爷的剑——需求、難點、方法與效果整理中。",
+        "en": "Color grading case: Sword Master—problem, constraints, method, and look forthcoming."
+      },
+      "status": "coming",
+      "updatedAt": "2026-03-03",
+      "ready": false
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "minimal-travel",
+  "group": "work",
+  "category": "applications",
+  "title": {
+    "zh": "低摩擦出行",
+    "en": "Low-Friction Travel"
+  },
+  "blurb": {
+    "zh": "本機 iOS App——自動整理上傳的照片與 PDF 預定行程單，以問答引導，結合老經驗旅者的 skill 教你行李怎麼帶。",
+    "en": "On-device iOS app—auto-organizes uploaded photos and PDF itineraries, guides you with Q&A, and packs traveler know-how."
+  },
+  "status": "coming",
+  "ready": false,
+  "links": {},
+  "media": [],
+  "sections": {
+    "problem": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "idea": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "method": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "system": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "demo": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming.",
+      "url": ""
+    },
+    "notes": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    }
+  },
+  "updatedAt": "2026-06-10"
+}

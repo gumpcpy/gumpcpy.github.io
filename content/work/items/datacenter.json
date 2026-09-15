@@ -1,0 +1,45 @@
+{
+  "id": "datacenter",
+  "group": "work",
+  "category": "film-tech",
+  "title": {
+    "zh": "Datacenter®",
+    "en": "Datacenter®"
+  },
+  "blurb": {
+    "zh": "影視製作資料中樞——流程、檔案與工具的統一調度與串接。",
+    "en": "Production data hub—orchestrating workflows, files, and tools in one connected system."
+  },
+  "status": "coming",
+  "ready": false,
+  "links": {},
+  "media": [],
+  "sections": {
+    "problem": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "idea": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "method": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "system": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "demo": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming.",
+      "url": ""
+    },
+    "notes": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    }
+  },
+  "updatedAt": "2026-04-12"
+}

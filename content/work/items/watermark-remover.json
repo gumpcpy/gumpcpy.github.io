@@ -1,0 +1,45 @@
+{
+  "id": "watermark-remover",
+  "group": "systems",
+  "category": "applications",
+  "title": {
+    "zh": "去水印工具",
+    "en": "Watermark Remover"
+  },
+  "blurb": {
+    "zh": "快速去除圖片／影片水印的小工具。",
+    "en": "A lightweight tool for removing watermarks from images and video."
+  },
+  "status": "coming",
+  "ready": false,
+  "links": {},
+  "media": [],
+  "sections": {
+    "problem": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "idea": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "method": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "system": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "demo": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming.",
+      "url": ""
+    },
+    "notes": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    }
+  },
+  "updatedAt": "2025-01-01"
+}

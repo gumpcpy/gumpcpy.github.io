@@ -1,93 +1,86 @@
 export const LANG_KEY = "catalogue-lang";
 export const THEME_KEY = "catalogue-theme";
 export const SUPPORTED = ["zh", "en"];
-export const ASSET_VERSION = "20260811h";
-export const UPDATED_AT = "2026-08-11";
+export const ASSET_VERSION = "20260915o";
+export const UPDATED_AT = "2026-09-15";
 
 export const SITE_NAV = [
-  { id: "projects", href: "/projects/", label: { zh: "作品", en: "Projects" } },
-  { id: "library", href: "/library/", label: { zh: "文庫", en: "Library" } },
-  { id: "about", href: "/about/", label: { zh: "關於", en: "About" } },
+  { id: "work", label: { zh: "作品", en: "Work" }, panel: "work" },
+  { id: "about", label: { zh: "關於我", en: "About" }, panel: "about", href: "/profile/" },
 ];
 
-export const LIBRARY_SECTIONS = [
-  {
-    id: "manuals",
-    href: "/library/manuals/",
-    label: { zh: "手冊", en: "Manuals" },
-    lead: {
-      zh: "建置手冊與操作說明。",
-      en: "Build manuals and how-to guides.",
-    },
-  },
-  {
-    id: "essays",
-    href: "/library/essays/",
-    label: { zh: "隨筆", en: "Essays" },
-    lead: {
-      zh: "讀書心得與長文思考。",
-      en: "Reading notes and longer reflections.",
-    },
-  },
-  {
-    id: "stories",
-    href: "/library/stories/",
-    label: { zh: "故事", en: "Stories" },
-    lead: {
-      zh: "創意與故事。",
-      en: "Creative writing and stories.",
-    },
-  },
-  {
-    id: "notes",
-    href: "/library/notes/",
-    label: { zh: "筆記", en: "Notes" },
-    lead: {
-      zh: "學習筆記與速記。",
-      en: "Learning notes and quick captures.",
-    },
-  },
+export const ABOUT_LINKS = [
+  { id: "experience", href: "/profile/#experience", label: { zh: "經歷", en: "Experience" } },
+  { id: "talks", href: "/profile/#talks", label: { zh: "演講／分享", en: "Talks" } },
+  { id: "certifications", href: "/profile/#certifications", label: { zh: "證明", en: "Credentials" } },
+  { id: "contact", href: "/profile/#contact", label: { zh: "聯繫", en: "Contact" } },
 ];
+
+export const SECTION_KEYS = [
+  "problem",
+  "idea",
+  "method",
+  "system",
+  "demo",
+  "notes",
+];
+
+export function categoryHref(catId) {
+  return `/work/?cat=${encodeURIComponent(catId)}`;
+}
 
 export const UI = {
   zh: {
     brand: "Py Chen",
     menuOpen: "開啟選單",
     menuClose: "關閉選單",
+    homeAria: "首頁",
+    workMenu: "作品目錄",
+    aboutMenu: "關於我",
     backToTop: "回到頂部",
     themeGroup: "外觀",
     themeLight: "日間",
     themeDark: "夜間",
     updatedAt: (date) => `更新日期：${date}`,
+    itemUpdatedAt: (date) => `最後更新：${date}`,
     contactLabel: "聯繫方式",
     contactSep: "：",
-    footerNote: "個人網站 · 作品、書寫與紀錄",
-    projectsEyebrow: "作品",
-    projectsTitle: "作品",
-    libraryEyebrow: "文庫",
-    libraryTitle: "文庫",
-    libraryLead: "生活裡的書寫——手冊、隨筆、故事與筆記。",
-    libraryEmpty: "尚無文章。",
-    libraryBack: "← 返回目錄",
-    libraryToc: "本篇目錄",
-    libraryArticles: "文章目錄",
-    libraryCrumb: "目前位置",
-    libraryPrev: "上一篇",
-    libraryNext: "下一篇",
-    siteTree: "站點目錄",
-    aboutEyebrow: "關於",
-    aboutTitle: "關於",
-    aboutLead: "履歷、活動與學習證書。",
-    cta: {
-      aiHub: "AI 工作流集成",
-      immersive: "沉浸式實驗室",
-      apps: "應用程式與插件",
+    footerNote: "個人網站 · 系統、案例與檔案",
+    homeEyebrow: "首頁",
+    homeTitle: "Py Chen",
+    homeLead:
+      "影視製作與軟體工程交會——系統設計、AI 工作流、沉浸式體驗與獨立應用。",
+    homeLatest: "最新項目",
+    workEyebrow: "作品",
+    workTitle: "作品",
+    workLead: "選擇一個專題深入閱讀。",
+    workEmpty: "此分類尚無項目。",
+    workBack: "← 返回",
+    workCrumb: "目前位置",
+    workPrev: "上一項",
+    workNext: "下一項",
+    workOpenDemo: "開啟 Demo →",
+    workViewItem: "閱讀 →",
+    workItemSoon: "撰寫中",
+    workNotReady: "此項目尚在整理，稍後開放。",
+    workDownload: "下載／展示 →",
+    workScreenshots: "產品截圖",
+    workRepo: "Private repo →",
+    galleryPrev: "上一張",
+    galleryNext: "下一張",
+    lightboxClose: "關閉",
+    sectionLabels: {
+      problem: "Problem",
+      idea: "Idea",
+      method: "Method",
+      system: "System",
+      demo: "Demo",
+      notes: "Notes",
     },
-    learningTitle: "學習軌跡",
-    learningLead: "Coursera 學習軌跡與證書——課程、機構與驗證連結。",
-    cvTitle: "個人簡歷",
-    cvLead: "履歷、榮譽、演講與活動——內容整理中，稍後補上。",
-    cvEmpty: "內容即將上架。",
+    profileEyebrow: "關於我",
+    profileTitle: "關於我",
+    profileLead: "經歷、演講、證明與聯繫方式。",
+    profileEmpty: "內容整理中。",
     viewCertificate: "查看證書 →",
     gradeLabel: "成績",
     expandLearning: (n) => `展開 ${n} 張證書`,
@@ -95,49 +88,60 @@ export const UI = {
     status: { live: "上線", wip: "進行中", coming: "即將上架" },
     linkShowcase: "展示頁 →",
     linkRepo: "原始碼",
-    linkAppStore: "App Store",
     loadError: "無法載入資料。",
-    readError: "找不到這篇文章。",
+    readError: "找不到這個項目。",
   },
   en: {
     brand: "Py Chen",
     menuOpen: "Open menu",
     menuClose: "Close menu",
+    homeAria: "Home",
+    workMenu: "Work",
+    aboutMenu: "About",
     backToTop: "Back to top",
     themeGroup: "Appearance",
     themeLight: "Day",
     themeDark: "Night",
     updatedAt: (date) => `Updated: ${date}`,
+    itemUpdatedAt: (date) => `Last updated: ${date}`,
     contactLabel: "Contact",
     contactSep: ": ",
-    footerNote: "Personal site · projects, writing, and notes",
-    projectsEyebrow: "Projects",
-    projectsTitle: "Projects",
-    libraryEyebrow: "Library",
-    libraryTitle: "Library",
-    libraryLead: "Writing from life—manuals, essays, stories, and notes.",
-    libraryEmpty: "No articles yet.",
-    libraryBack: "← Back to index",
-    libraryToc: "On this page",
-    libraryArticles: "Articles",
-    libraryCrumb: "You are here",
-    libraryPrev: "Previous",
-    libraryNext: "Next",
-    siteTree: "Site map",
-    aboutEyebrow: "About",
-    aboutTitle: "About",
-    aboutLead: "CV, events, and learning certificates.",
-    cta: {
-      aiHub: "AI Hub",
-      immersive: "Immersive Lab",
-      apps: "Apps & Plugins",
+    footerNote: "Personal site · systems, cases, and profile",
+    homeEyebrow: "Home",
+    homeTitle: "Py Chen",
+    homeLead:
+      "Where film production meets software—systems, AI workflows, immersive experiences, and independent apps.",
+    homeLatest: "Latest",
+    workEyebrow: "Work",
+    workTitle: "Work",
+    workLead: "Open a project page to read in depth.",
+    workEmpty: "No items in this category yet.",
+    workBack: "← Back",
+    workCrumb: "You are here",
+    workPrev: "Previous",
+    workNext: "Next",
+    workOpenDemo: "Open demo →",
+    workViewItem: "Read →",
+    workItemSoon: "Writing",
+    workNotReady: "This item is still being prepared.",
+    workDownload: "Download / showcase →",
+    workScreenshots: "Screenshots",
+    workRepo: "Private repo →",
+    galleryPrev: "Previous",
+    galleryNext: "Next",
+    lightboxClose: "Close",
+    sectionLabels: {
+      problem: "Problem",
+      idea: "Idea",
+      method: "Method",
+      system: "System",
+      demo: "Demo",
+      notes: "Notes",
     },
-    learningTitle: "Learning",
-    learningLead:
-      "Coursera learning journey and certificates—courses, institutions, and verification links.",
-    cvTitle: "CV & Events",
-    cvLead: "CV, honors, talks, and events—coming soon.",
-    cvEmpty: "Content coming soon.",
+    profileEyebrow: "About",
+    profileTitle: "About",
+    profileLead: "Experience, talks, credentials, and contact.",
+    profileEmpty: "Content forthcoming.",
     viewCertificate: "View certificate →",
     gradeLabel: "Grade",
     expandLearning: (n) => `Show ${n} certificates`,
@@ -145,14 +149,16 @@ export const UI = {
     status: { live: "Live", wip: "WIP", coming: "Coming" },
     linkShowcase: "Showcase →",
     linkRepo: "Source",
-    linkAppStore: "App Store",
     loadError: "Failed to load data.",
-    readError: "Article not found.",
+    readError: "Item not found.",
   },
 };
 
 let lang = "zh";
 const langListeners = new Set();
+let workTreeCache = null;
+let workIndexCache = null;
+let openPanel = null; // 'work' | 'about' | null
 
 export function getLang() {
   return lang;
@@ -223,7 +229,9 @@ export function ensureThemeSwitch() {
     group.id = "theme-switch";
     group.className = "theme-switch";
     group.setAttribute("role", "group");
-    end.appendChild(group);
+    const burger = document.getElementById("nav-toggle");
+    if (burger) end.insertBefore(group, burger);
+    else end.appendChild(group);
   }
   group.setAttribute("aria-label", ui("themeGroup"));
   group.replaceChildren();
@@ -286,9 +294,48 @@ export function assetUrl(file) {
   return `/assets/coursera/${file}?v=${ASSET_VERSION}`;
 }
 
-function formatUpdatedAt() {
-  const [y, m, d] = UPDATED_AT.split("-").map(Number);
-  if (!y || !m || !d) return UPDATED_AT;
+export function itemHref(id) {
+  return `/work/item/?id=${encodeURIComponent(id)}`;
+}
+
+export function getIndexItem(id) {
+  return (workIndexCache?.items || []).find((x) => x.id === id) || null;
+}
+
+/** Only explicit ready:true is open; missing/false stays disabled. */
+export function isItemReady(metaOrId) {
+  if (metaOrId == null) return false;
+  if (typeof metaOrId === "object") return metaOrId.ready === true;
+  const hit = getIndexItem(metaOrId);
+  return hit?.ready === true;
+}
+
+/** Wire an anchor: ready → real link; else visible but not clickable. */
+export function bindItemLink(anchor, id, { onClick } = {}) {
+  const ready = isItemReady(id);
+  anchor.classList.toggle("is-disabled", !ready);
+  if (ready) {
+    anchor.href = itemHref(id);
+    anchor.removeAttribute("aria-disabled");
+    anchor.removeAttribute("tabindex");
+    if (onClick) anchor.addEventListener("click", onClick);
+  } else {
+    anchor.removeAttribute("href");
+    anchor.setAttribute("aria-disabled", "true");
+    anchor.setAttribute("tabindex", "-1");
+    anchor.title = ui("workItemSoon");
+    anchor.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  }
+  return anchor;
+}
+
+export function formatDate(iso) {
+  if (!iso) return "";
+  const [y, m, d] = String(iso).split("-").map(Number);
+  if (!y || !m || !d) return iso;
   if (lang === "zh") return `${y} 年 ${m} 月 ${d} 日`;
   const date = new Date(Date.UTC(y, m - 1, d));
   return new Intl.DateTimeFormat("en", {
@@ -299,72 +346,292 @@ function formatUpdatedAt() {
   }).format(date);
 }
 
-function isDesktopTree() {
-  return window.matchMedia("(min-width: 960px)").matches;
+function formatSiteUpdatedAt() {
+  return formatDate(UPDATED_AT);
 }
 
-function ensureTreeBackdrop() {
-  let backdrop = document.getElementById("site-tree-backdrop");
+function isDesktopNav() {
+  return window.matchMedia("(min-width: 900px)").matches;
+}
+
+function ensureMegaPanel() {
+  let panel = document.getElementById("mega-panel");
+  if (panel) return panel;
+  panel = document.createElement("div");
+  panel.id = "mega-panel";
+  panel.className = "mega-panel";
+  panel.hidden = true;
+  document.body.appendChild(panel);
+  return panel;
+}
+
+function ensureMegaBackdrop() {
+  let backdrop = document.getElementById("mega-backdrop");
   if (backdrop) return backdrop;
   backdrop = document.createElement("button");
   backdrop.type = "button";
-  backdrop.id = "site-tree-backdrop";
-  backdrop.className = "site-tree-backdrop";
+  backdrop.id = "mega-backdrop";
+  backdrop.className = "mega-backdrop";
   backdrop.setAttribute("aria-label", ui("menuClose"));
+  backdrop.hidden = true;
   backdrop.tabIndex = -1;
-  document.body.appendChild(backdrop);
   backdrop.addEventListener("click", () => closeNav());
+  document.body.appendChild(backdrop);
   return backdrop;
+}
+
+function setPanelBackdrop(open) {
+  const backdrop = ensureMegaBackdrop();
+  document.body.classList.toggle("is-panel-open", open);
+  backdrop.hidden = !open;
+  backdrop.classList.toggle("is-open", open);
+}
+
+function ensureMobileSheet() {
+  let sheet = document.getElementById("mobile-menu");
+  if (sheet) return sheet;
+  sheet = document.createElement("div");
+  sheet.id = "mobile-menu";
+  sheet.className = "mobile-sheet";
+  sheet.hidden = true;
+  document.body.appendChild(sheet);
+  return sheet;
+}
+
+export function closePanels() {
+  openPanel = null;
+  const panel = document.getElementById("mega-panel");
+  if (panel) {
+    panel.hidden = true;
+    panel.classList.remove("is-open");
+  }
+  document.querySelectorAll(".nav-pill").forEach((b) => {
+    b.classList.remove("is-open");
+    b.setAttribute("aria-expanded", "false");
+  });
+  if (!document.body.classList.contains("is-nav-open")) {
+    setPanelBackdrop(false);
+  }
 }
 
 export function setNavOpen(open) {
   const nav = document.querySelector(".nav");
   const toggle = document.getElementById("nav-toggle");
-  if (isDesktopTree()) open = false;
-  document.body.classList.toggle("is-tree-open", open);
+  const menu = ensureMobileSheet();
+  if (isDesktopNav()) open = false;
+  document.body.classList.toggle("is-nav-open", open);
   if (nav) nav.classList.toggle("is-open", open);
   if (toggle) {
+    toggle.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-controls", "site-tree");
     toggle.setAttribute("aria-label", open ? ui("menuClose") : ui("menuOpen"));
   }
-  const backdrop = document.getElementById("site-tree-backdrop");
-  if (backdrop) backdrop.setAttribute("aria-hidden", String(!open));
-  document.documentElement.style.overflow = open && !isDesktopTree() ? "hidden" : "";
+  menu.hidden = !open;
+  menu.classList.toggle("is-open", open);
+  document.documentElement.style.overflow = open && !isDesktopNav() ? "hidden" : "";
+  if (!open) closePanels();
+  else setPanelBackdrop(true);
 }
 
 export function closeNav() {
   setNavOpen(false);
+  closePanels();
+}
+
+export function resolveActiveNav(hint) {
+  if (hint) return hint;
+  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+  if (path === "/" || path === "") return "home";
+  if (path.startsWith("/profile")) return "about";
+  if (path.startsWith("/work")) return "work";
+  return "home";
+}
+
+function titleForId(id) {
+  const hit = (workIndexCache?.items || []).find((x) => x.id === id);
+  return hit ? t(hit.title) : id;
+}
+
+function renderWorkMega(container) {
+  container.replaceChildren();
+  const inner = el("div", "mega-inner");
+  const taxonomy = workTreeCache;
+  const cats = taxonomy?.categories || [];
+  for (const cat of cats) {
+    const col = el("div", "mega-col");
+    col.appendChild(el("p", "mega-col-title", t(cat.label)));
+    const list = el("ul", "mega-list");
+    for (const id of cat.itemIds || []) {
+      const li = document.createElement("li");
+      const a = el("a", null, titleForId(id));
+      bindItemLink(a, id, { onClick: closeNav });
+      li.appendChild(a);
+      list.appendChild(li);
+    }
+    col.appendChild(list);
+    inner.appendChild(col);
+  }
+  container.appendChild(inner);
+}
+
+function renderAboutMega(container) {
+  container.replaceChildren();
+  const inner = el("div", "mega-inner mega-inner-about");
+  const list = el("ul", "mega-list");
+  for (const link of ABOUT_LINKS) {
+    const li = document.createElement("li");
+    const a = el("a", null, t(link.label));
+    a.href = link.href;
+    a.addEventListener("click", closeNav);
+    li.appendChild(a);
+    list.appendChild(li);
+  }
+  inner.appendChild(list);
+  container.appendChild(inner);
+}
+
+function openMega(kind) {
+  if (!isDesktopNav()) return;
+  const panel = ensureMegaPanel();
+  openPanel = kind;
+  panel.hidden = false;
+  panel.classList.add("is-open");
+  setPanelBackdrop(true);
+  if (kind === "work") renderWorkMega(panel);
+  else renderAboutMega(panel);
+  document.querySelectorAll(".nav-pill").forEach((b) => {
+    const on = b.dataset.panel === kind;
+    b.classList.toggle("is-open", on);
+    b.setAttribute("aria-expanded", String(on));
+  });
+}
+
+function renderMobileSheet() {
+  const sheet = ensureMobileSheet();
+  sheet.replaceChildren();
+  const close = document.createElement("button");
+  close.type = "button";
+  close.className = "mobile-close";
+  close.setAttribute("aria-label", ui("menuClose"));
+  close.innerHTML = "&times;";
+  close.addEventListener("click", () => closeNav());
+  sheet.appendChild(close);
+
+  const body = el("div", "mobile-sheet-body");
+  body.appendChild(el("p", "mobile-section-label", ui("workMenu")));
+  for (const cat of workTreeCache?.categories || []) {
+    body.appendChild(el("p", "mobile-cat-title", t(cat.label)));
+    for (const id of cat.itemIds || []) {
+      const a = el("a", "mobile-link", titleForId(id));
+      bindItemLink(a, id, { onClick: closeNav });
+      body.appendChild(a);
+    }
+  }
+  body.appendChild(el("p", "mobile-section-label", ui("aboutMenu")));
+  for (const link of ABOUT_LINKS) {
+    const a = el("a", "mobile-link", t(link.label));
+    a.href = link.href;
+    a.addEventListener("click", closeNav);
+    body.appendChild(a);
+  }
+  sheet.appendChild(body);
 }
 
 export function renderSiteNav(activeId) {
-  const nav = document.getElementById("nav-links");
-  if (!nav) return;
-  nav.replaceChildren();
-  for (const item of SITE_NAV) {
-    const a = el("a", item.id === activeId ? "is-active" : null, t(item.label));
-    a.href = item.href;
-    a.addEventListener("click", closeNav);
-    nav.appendChild(a);
+  const active = resolveActiveNav(activeId);
+  const desktop = document.getElementById("nav-desktop");
+  if (desktop) {
+    desktop.replaceChildren();
+    for (const item of SITE_NAV) {
+      if (item.id === "about") {
+        const wrap = el("div", "nav-pill-wrap");
+        const a = el("a", `nav-pill${item.id === active ? " is-active" : ""}`, t(item.label));
+        a.href = item.href;
+        a.dataset.panel = "about";
+        a.addEventListener("mouseenter", () => {
+          if (isDesktopNav()) openMega("about");
+        });
+        a.addEventListener("focus", () => {
+          if (isDesktopNav()) openMega("about");
+        });
+        a.addEventListener("click", () => closeNav());
+        wrap.appendChild(a);
+        desktop.appendChild(wrap);
+        continue;
+      }
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = `nav-pill${item.id === active ? " is-active" : ""}`;
+      btn.textContent = t(item.label);
+      btn.dataset.panel = item.panel;
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-haspopup", "true");
+      btn.addEventListener("mouseenter", () => {
+        if (isDesktopNav()) openMega(item.panel);
+      });
+      btn.addEventListener("focus", () => {
+        if (isDesktopNav()) openMega(item.panel);
+      });
+      btn.addEventListener("click", (e) => {
+        if (!isDesktopNav()) return;
+        e.preventDefault();
+        if (openPanel === item.panel) closePanels();
+        else openMega(item.panel);
+      });
+      desktop.appendChild(btn);
+    }
   }
+
+  const home = document.querySelector(".nav-home");
+  if (home) {
+    home.setAttribute("aria-label", ui("homeAria"));
+    home.classList.toggle("is-active", active === "home");
+  }
+
+  renderMobileSheet();
 }
 
 export function bindNavToggle() {
   const toggle = document.getElementById("nav-toggle");
   if (!toggle || toggle.dataset.bound) return;
   toggle.dataset.bound = "1";
-  ensureTreeBackdrop();
+  ensureMobileSheet();
+  ensureMegaPanel();
+  ensureMegaBackdrop();
+
   toggle.addEventListener("click", () => {
     const open = toggle.getAttribute("aria-expanded") === "true";
+    if (!open) renderMobileSheet();
     setNavOpen(!open);
   });
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeNav();
   });
+
+  // close mega when leaving nav + panel
+  const nav = document.querySelector(".nav");
+  const panel = ensureMegaPanel();
+  const leaveTimer = { id: null };
+  const scheduleClose = () => {
+    clearTimeout(leaveTimer.id);
+    leaveTimer.id = setTimeout(() => {
+      if (isDesktopNav()) closePanels();
+    }, 180);
+  };
+  const cancelClose = () => clearTimeout(leaveTimer.id);
+  if (nav) {
+    nav.addEventListener("mouseleave", scheduleClose);
+    nav.addEventListener("mouseenter", cancelClose);
+  }
+  panel.addEventListener("mouseleave", scheduleClose);
+  panel.addEventListener("mouseenter", cancelClose);
+
   window.addEventListener(
     "resize",
     () => {
-      if (isDesktopTree()) closeNav();
+      if (isDesktopNav()) setNavOpen(false);
+      else closePanels();
     },
     { passive: true }
   );
@@ -403,7 +670,10 @@ export function applyChrome({ activeNav, title } = {}) {
   document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
 
   const brand = document.querySelector(".nav-brand");
-  if (brand) brand.textContent = ui("brand");
+  if (brand) {
+    brand.textContent = ui("brand");
+    brand.href = "/";
+  }
 
   renderSiteNav(activeNav);
 
@@ -417,7 +687,7 @@ export function applyChrome({ activeNav, title } = {}) {
   if (contactLabel) contactLabel.textContent = `${ui("contactLabel")}${ui("contactSep")}`;
 
   const footerUpdated = document.getElementById("footer-updated");
-  if (footerUpdated) footerUpdated.textContent = ui("updatedAt")(formatUpdatedAt());
+  if (footerUpdated) footerUpdated.textContent = ui("updatedAt")(formatSiteUpdatedAt());
 
   const backTop = document.getElementById("back-to-top");
   if (backTop) backTop.setAttribute("aria-label", ui("backToTop"));
@@ -454,145 +724,83 @@ export function bindSky() {
   );
 }
 
-let libraryTreeCache = null;
-let treeActiveNav = "projects";
-
-function currentArticleSlug() {
-  return new URLSearchParams(window.location.search).get("id") || "";
-}
-
-function currentLibrarySection() {
-  return document.body.dataset.section || "";
-}
-
-function ensureSiteTree() {
-  ensureTreeBackdrop();
-  let tree = document.getElementById("site-tree");
-  if (tree) return tree;
-  tree = document.createElement("aside");
-  tree.id = "site-tree";
-  tree.className = "site-tree";
-  tree.setAttribute("aria-label", "Site");
-  document.body.appendChild(tree);
-  document.body.classList.add("has-site-tree");
-  return tree;
-}
-
-function bindTreeLinkClose(anchor) {
-  anchor.addEventListener("click", () => {
-    if (!isDesktopTree()) closeNav();
+export async function loadWorkTaxonomy() {
+  if (workTreeCache) return workTreeCache;
+  const res = await fetch(`/data/work/taxonomy.json?v=${ASSET_VERSION}`, {
+    cache: "no-cache",
   });
+  if (!res.ok) throw new Error(`taxonomy ${res.status}`);
+  workTreeCache = await res.json();
+  return workTreeCache;
 }
 
-async function loadLibraryTree() {
-  if (libraryTreeCache) return libraryTreeCache;
-  const sections = [];
-  for (const section of LIBRARY_SECTIONS) {
-    try {
-      const res = await fetch(
-        `/data/library/${section.id}/index.json?v=${ASSET_VERSION}`,
-        { cache: "no-cache" }
-      );
-      const data = res.ok ? await res.json() : { items: [] };
-      sections.push({ ...section, items: data.items || [] });
-    } catch {
-      sections.push({ ...section, items: [] });
-    }
-  }
-  libraryTreeCache = sections;
-  return sections;
+export async function loadWorkItem(id) {
+  const res = await fetch(`/data/work/items/${encodeURIComponent(id)}.json?v=${ASSET_VERSION}`, {
+    cache: "no-cache",
+  });
+  if (!res.ok) return null;
+  return res.json();
 }
 
-function renderSiteTree() {
-  const tree = ensureSiteTree();
-  const activeSection = currentLibrarySection();
-  const activeSlug = currentArticleSlug();
-  const sections = libraryTreeCache || [];
+export async function loadWorkIndex() {
+  if (workIndexCache) return workIndexCache;
+  const res = await fetch(`/data/work/index.json?v=${ASSET_VERSION}`, {
+    cache: "no-cache",
+  });
+  if (!res.ok) throw new Error(`index ${res.status}`);
+  workIndexCache = await res.json();
+  return workIndexCache;
+}
 
-  tree.replaceChildren();
-  tree.setAttribute("aria-label", ui("siteTree"));
-
-  const brand = el("a", "site-tree-brand", ui("brand"));
-  brand.href = "/projects/";
-  bindTreeLinkClose(brand);
-  tree.appendChild(brand);
-
-  const label = el("p", "site-tree-label", ui("siteTree"));
-  tree.appendChild(label);
-
-  const root = el("ul", "site-tree-list");
-
-  // Projects
-  const projectsLi = el("li", "site-tree-node");
-  const projectsLink = el(
-    "a",
-    treeActiveNav === "projects" ? "is-active" : null,
-    t(SITE_NAV[0].label)
-  );
-  projectsLink.href = "/projects/";
-  bindTreeLinkClose(projectsLink);
-  projectsLi.appendChild(projectsLink);
-  root.appendChild(projectsLi);
-
-  // Library + branches + articles
-  const libraryLi = el("li", "site-tree-node has-children");
-  const libraryLink = el(
-    "a",
-    treeActiveNav === "library" && !activeSection ? "is-active" : null,
-    t(SITE_NAV[1].label)
-  );
-  libraryLink.href = "/library/";
-  bindTreeLinkClose(libraryLink);
-  libraryLi.appendChild(libraryLink);
-
-  const sectionList = el("ul", "site-tree-list nested");
-  for (const section of sections.length ? sections : LIBRARY_SECTIONS) {
-    const items = section.items || [];
-    const secLi = el("li", "site-tree-node has-children");
-    const secActive =
-      treeActiveNav === "library" && activeSection === section.id && !activeSlug;
-    const secLink = el("a", secActive ? "is-active" : null, t(section.label));
-    secLink.href = section.href;
-    bindTreeLinkClose(secLink);
-    secLi.appendChild(secLink);
-
-    if (items.length) {
-      const articleList = el("ul", "site-tree-list nested articles");
-      for (const item of items) {
-        const artLi = el("li", "site-tree-node article");
-        const artActive =
-          activeSection === section.id && activeSlug === item.slug;
-        const artLink = el("a", artActive ? "is-active" : null, t(item.title));
-        artLink.href = `${section.href}?id=${encodeURIComponent(item.slug)}`;
-        bindTreeLinkClose(artLink);
-        artLi.appendChild(artLink);
-        articleList.appendChild(artLi);
-      }
-      secLi.appendChild(articleList);
-    }
-    sectionList.appendChild(secLi);
+export function findCategory(taxonomy, categoryId) {
+  const cats = taxonomy?.categories || [];
+  for (const cat of cats) {
+    if (cat.id === categoryId) return { category: cat };
   }
-  libraryLi.appendChild(sectionList);
-  root.appendChild(libraryLi);
+  // legacy nested groups
+  for (const group of taxonomy?.groups || []) {
+    for (const cat of group.categories || []) {
+      if (cat.id === categoryId) return { group, category: cat };
+    }
+  }
+  return null;
+}
 
-  // About
-  const aboutLi = el("li", "site-tree-node");
-  const aboutLink = el(
-    "a",
-    treeActiveNav === "about" ? "is-active" : null,
-    t(SITE_NAV[2].label)
-  );
-  aboutLink.href = "/about/";
-  bindTreeLinkClose(aboutLink);
-  aboutLi.appendChild(aboutLink);
-  root.appendChild(aboutLi);
+export function findItemContext(taxonomy, itemId) {
+  const cats = taxonomy?.categories || [];
+  const scan = (cat) => {
+    const ids = cat.itemIds || [];
+    const idx = ids.indexOf(itemId);
+    if (idx >= 0) {
+      return {
+        category: cat,
+        itemIds: ids,
+        index: idx,
+        prevId: idx > 0 ? ids[idx - 1] : null,
+        nextId: idx < ids.length - 1 ? ids[idx + 1] : null,
+      };
+    }
+    return null;
+  };
+  for (const cat of cats) {
+    const hit = scan(cat);
+    if (hit) return hit;
+  }
+  for (const group of taxonomy?.groups || []) {
+    for (const cat of group.categories || []) {
+      const hit = scan(cat);
+      if (hit) return hit;
+    }
+  }
+  return null;
+}
 
-  tree.appendChild(root);
+export function navIdForCategory() {
+  return "work";
 }
 
 export function bootSite({ activeNav, onLang } = {}) {
   lang = detectLang();
-  treeActiveNav = activeNav || "projects";
   applyTheme(resolveTheme());
   bindThemeSystemListener();
   bindLangToggle();
@@ -600,20 +808,21 @@ export function bootSite({ activeNav, onLang } = {}) {
   bindBackToTop();
   bindSky();
   applyChrome({ activeNav });
-  ensureSiteTree();
-  renderSiteTree();
-  loadLibraryTree().then(() => renderSiteTree());
+
+  Promise.all([loadWorkTaxonomy(), loadWorkIndex()])
+    .then(() => {
+      renderSiteNav(activeNav);
+    })
+    .catch((err) => console.error(err));
 
   if (onLang) {
     onLangChange(() => {
       applyChrome({ activeNav });
-      renderSiteTree();
       onLang();
     });
   } else {
     onLangChange(() => {
       applyChrome({ activeNav });
-      renderSiteTree();
     });
   }
 }

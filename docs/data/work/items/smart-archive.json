@@ -1,0 +1,48 @@
+{
+  "id": "smart-archive",
+  "group": "work",
+  "category": "ai",
+  "title": {
+    "zh": "Smart Archive",
+    "en": "Smart Archive"
+  },
+  "blurb": {
+    "zh": "AI NAS——本地端 AI 智能歸檔與查找系統。",
+    "en": "AI NAS—on-prem AI-powered smart archive and search."
+  },
+  "status": "live",
+  "ready": false,
+  "links": {
+    "site": "https://gumpcpy.github.io/smart-archive-intro/",
+    "repo": "https://github.com/gumpcpy/smart-archive-intro"
+  },
+  "media": [],
+  "sections": {
+    "problem": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "idea": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "method": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "system": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    },
+    "demo": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming.",
+      "url": "https://gumpcpy.github.io/smart-archive-intro/"
+    },
+    "notes": {
+      "zh": "內容整理中。",
+      "en": "Content forthcoming."
+    }
+  },
+  "updatedAt": "2026-08-20"
+}
