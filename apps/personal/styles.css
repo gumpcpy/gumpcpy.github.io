@@ -1676,6 +1676,123 @@ body.is-reading .work-item-section.section {
   margin-top: 1.1rem !important;
 }
 
+.work-diagram-wrap {
+  width: 100%;
+  max-width: 100%;
+  margin: 0.85rem 0 0.35rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme="light"] .work-diagram-wrap {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.work-diagram {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: clamp(0.58rem, 1.55vw, 0.78rem);
+  line-height: 1.35;
+  letter-spacing: 0;
+  white-space: pre;
+  color: var(--ink);
+  text-align: left;
+  min-width: max-content;
+}
+
+/* Structured architecture flow (avoids CJK monospace misalignment) */
+.arch-flow {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0.9rem auto 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+.arch-flow-arrow {
+  text-align: center;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.75;
+  user-select: none;
+}
+
+.arch-flow-layer {
+  width: 100%;
+}
+
+.arch-flow-band {
+  border: 1px solid rgba(232, 184, 109, 0.35);
+  border-radius: 14px;
+  padding: 0.7rem 0.75rem 0.8rem;
+  background: rgba(232, 184, 109, 0.06);
+}
+
+.arch-flow-band-title {
+  margin: 0 0 0.65rem;
+  text-align: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.arch-flow-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  gap: 0.55rem;
+}
+
+.arch-flow-node {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.7rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  min-width: 0;
+}
+
+.arch-flow-node.is-wide {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.arch-flow-node.is-soft {
+  background: rgba(255, 255, 255, 0.025);
+  border-style: dashed;
+}
+
+.arch-flow-node-title {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.arch-flow-node-body {
+  margin: 0.35rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+html[data-theme="light"] .arch-flow-band {
+  background: rgba(232, 184, 109, 0.1);
+}
+
+html[data-theme="light"] .arch-flow-node {
+  background: rgba(255, 255, 255, 0.72);
+}
+
 .work-system-links {
   display: flex;
   flex-wrap: wrap;
@@ -1749,14 +1866,22 @@ body.is-reading .work-item-section.section {
 
 .shot-gallery-thumb img {
   display: block;
-  height: min(460px, 68vh);
+  height: min(420px, 62vh);
   width: auto;
-  max-width: min(78vw, 260px);
-  object-fit: cover;
+  max-width: min(92vw, 880px);
+  object-fit: contain;
+  object-position: center;
   border-radius: 16px;
   border: 1px solid var(--line);
   background: rgba(0, 0, 0, 0.18);
   transition: transform 0.2s ease;
+}
+
+@media (max-width: 699px) {
+  .shot-gallery-thumb img {
+    height: min(360px, 58vh);
+    max-width: 88vw;
+  }
 }
 
 .shot-gallery-thumb:hover img {
@@ -1820,8 +1945,8 @@ body.is-reading .work-item-section.section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem;
-  background: rgba(0, 0, 0, 0.78);
+  padding: 1.5rem 3.25rem;
+  background: rgba(0, 0, 0, 0.82);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
@@ -1835,13 +1960,25 @@ body.is-reading .work-item-section.section {
 }
 
 .shot-lightbox-img {
-  max-width: min(92vw, 420px);
-  max-height: 86vh;
+  max-width: min(96vw, 1280px);
+  max-height: min(90vh, 900px);
   width: auto;
   height: auto;
   object-fit: contain;
-  border-radius: 18px;
+  border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 699px) {
+  .shot-lightbox {
+    padding: 3.25rem 0.75rem 1.25rem;
+  }
+
+  .shot-lightbox-img {
+    max-width: 96vw;
+    max-height: 82vh;
+    border-radius: 10px;
+  }
 }
 
 .shot-lightbox-close {

@@ -13,8 +13,8 @@
         "en": "AI NAS—on-prem AI-powered smart archive and search."
       },
       "status": "live",
-      "updatedAt": "2026-08-20",
-      "ready": false
+      "updatedAt": "2026-09-29",
+      "ready": true
     },
     {
       "id": "puppet-theater",

@@ -11,38 +11,142 @@
     "en": "AI NAS—on-prem AI-powered smart archive and search."
   },
   "status": "live",
-  "ready": false,
+  "ready": true,
   "links": {
     "site": "https://gumpcpy.github.io/smart-archive-intro/",
     "repo": "https://github.com/gumpcpy/smart-archive-intro"
   },
+  "hero": {
+    "zh": "/assets/work/smart-archive/hero/zh.png",
+    "en": "/assets/work/smart-archive/hero/en.png"
+  },
   "media": [],
   "sections": {
     "problem": {
-      "zh": "內容整理中。",
-      "en": "Content forthcoming."
+      "zh": "檔案太多，尋找困難？想用AI的智能，又不想增加模型訂閱的成本。\n不想放在雲端又想在小團隊裡共享。\n想要一個簡單的UI和低學習曲線的使用方式。",
+      "en": "Too many files, difficult to find? Want to use AI's intelligence, but don't want to increase the cost of model subscription.\nDon't want to put in the cloud and want to share with a small team.\nWant a simple UI and low learning curve usage."
     },
     "idea": {
-      "zh": "內容整理中。",
-      "en": "Content forthcoming."
+      "zh": "打造一個本地端 AI 智能歸檔與查找系統，它使用 AI 技術來自動歸檔和查找資料。\n用戶上傳檔案後，系統會自動將檔案建立索引、標籤和摘要，方便用戶查找。",
+      "en": "Build a local AI smart archive and search system that uses AI technology to automatically archive and find data. After users upload files, the system will automatically classify the files and create indexes to help users find them easily."
     },
     "method": {
-      "zh": "內容整理中。",
-      "en": "Content forthcoming."
+      "zh": "架設在本地 NAS 伺服器上，使用本地模型進行檔案分析與索引，可依照server性能選用適合的模型，用 Web 界面提供給用戶使用。",
+      "en": "Built on a local NAS server, using local models for file analysis and indexing, and providing a web interface for users to use."
     },
     "system": {
-      "zh": "內容整理中。",
-      "en": "Content forthcoming."
+      "zh": "區域網路內的前後台，接到本機主應用；再經 LLM Router、資料庫與任務佇列，連到本地／雲端模型與 NAS／向量索引／可選 LTO。支援三種語言，以及手機操作。",
+      "en": "Front office and admin on the LAN feed a local app host, then LLM Router, database, and job queue—wired to local/cloud models plus NAS, vector index, and optional LTO.",
+      "downloadUrl": "",
+      "screenshots": {
+        "zh": [
+          "/assets/work/smart-archive/screens/zh/01.png",
+          "/assets/work/smart-archive/screens/zh/02.png"
+        ],
+        "en": [
+          "/assets/work/smart-archive/screens/en/01.png",
+          "/assets/work/smart-archive/screens/en/02.png"
+        ]
+      },
+      "diagram": {
+        "kind": "flow",
+        "layers": [
+          {
+            "band": {
+              "zh": "區域網路（瀏覽器存取）",
+              "en": "LAN (browser access)"
+            },
+            "nodes": [
+              {
+                "title": { "zh": "使用者端（前臺）", "en": "User (front)" },
+                "body": { "zh": "上傳 / 搜尋 / 預覽 / 下載", "en": "Upload / search / preview / download" }
+              },
+              {
+                "title": { "zh": "管理後台（Admin）", "en": "Admin" },
+                "body": { "zh": "模型切換 / API Key / 權限 / 運維", "en": "Model switch / API keys / roles / ops" }
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "title": { "zh": "主應用主機", "en": "App host" },
+                "body": {
+                  "zh": "Mac Studio 或 Linux · Node.js 後端 · 任務佇列 · 審計",
+                  "en": "Mac Studio or Linux · Node.js · queue · audit"
+                },
+                "wide": true
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "title": "LLM Router",
+                "body": { "zh": "模型路由層", "en": "Model routing" }
+              },
+              {
+                "title": "PostgreSQL",
+                "body": { "zh": "標籤 / 權限 / 配置", "en": "Tags / roles / config" }
+              },
+              {
+                "title": "BullMQ",
+                "body": { "zh": "任務佇列", "en": "Job queue" }
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "title": "Ollama",
+                "body": { "zh": "本地 LLM", "en": "Local LLM" },
+                "tone": "soft"
+              },
+              {
+                "title": "OpenAI",
+                "body": { "zh": "雲端 API", "en": "Cloud API" },
+                "tone": "soft"
+              },
+              {
+                "title": "Claude",
+                "body": { "zh": "雲端 API", "en": "Cloud API" },
+                "tone": "soft"
+              },
+              {
+                "title": { "zh": "本地 OCR", "en": "Local OCR" },
+                "body": "Whisper…",
+                "tone": "soft"
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "title": "NAS",
+                "body": { "zh": "線上儲存", "en": "Online storage" }
+              },
+              {
+                "title": "pgvector",
+                "body": { "zh": "語義索引", "en": "Semantic index" }
+              },
+              {
+                "title": { "zh": "LTO（可選）", "en": "LTO (optional)" },
+                "body": { "zh": "永久歸檔", "en": "Cold archive" }
+              }
+            ]
+          }
+        ]
+      }
     },
     "demo": {
-      "zh": "內容整理中。",
-      "en": "Content forthcoming.",
-      "url": "https://gumpcpy.github.io/smart-archive-intro/"
+      "zh": "系統示範(操作介面，沒有本地模型分析)",
+      "en": "System demo.",
+      "url": "https://smart-archive.huhu-tech.com/"
     },
     "notes": {
-      "zh": "內容整理中。",
-      "en": "Content forthcoming."
+      "zh": "使用方式需要很接近使用者直接瀏覽檔案樹的方式。\nUI要簡單，但是同時保證每種身份和權限的公能玩善。\n後台管理系統可以設定PDF和圖檔及影片是否要做分析和歸檔。\n支援沒有本地模型時，單純用檔案階層和檔名作為查找依據。",
+      "en": "The usage needs to be very simple, very close to the way users directly operate files.\nThe UI needs to be simple, but at the same time ensure the functionality of each identity and permission is perfect.\nThe backend management system can set whether to analyze and archive PDF, image, and video files.\nSupport using file hierarchy and file name as search criteria when there is no local model."
     }
   },
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-09-29"
 }

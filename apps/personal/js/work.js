@@ -219,7 +219,79 @@ function sectionHasContent(sec) {
     ((Array.isArray(bullets) && bullets.length) ||
       (bullets.zh && bullets.zh.length) ||
       (bullets.en && bullets.en.length));
-  return Boolean((text && text.trim()) || url || hasShots || hasBullets);
+  const diagram = hasDiagram(sec);
+  return Boolean((text && text.trim()) || url || hasShots || hasBullets || diagram);
+}
+
+function pickText(value) {
+  if (value == null) return "";
+  if (typeof value === "string") return value;
+  return String(value[getLang()] || value.zh || value.en || "").trim();
+}
+
+function hasDiagram(sec) {
+  const d = sec?.diagram;
+  if (!d) return false;
+  if (typeof d === "string") return Boolean(d.trim());
+  if (d.kind === "flow" && Array.isArray(d.layers) && d.layers.length) return true;
+  return Boolean(pickText(d));
+}
+
+function appendDiagram(parent, sec) {
+  const d = sec?.diagram;
+  if (!d) return;
+  if (typeof d === "object" && d.kind === "flow") {
+    appendFlowDiagram(parent, d);
+    return;
+  }
+  const raw = typeof d === "string" ? d.trim() : pickText(d);
+  if (!raw) return;
+  const wrap = el("div", "work-diagram-wrap");
+  const pre = document.createElement("pre");
+  pre.className = "work-diagram";
+  pre.textContent = raw;
+  wrap.appendChild(pre);
+  parent.appendChild(wrap);
+}
+
+function appendFlowDiagram(parent, diagram) {
+  const wrap = el("div", "arch-flow");
+  const layers = diagram.layers || [];
+  layers.forEach((layer, index) => {
+    if (index > 0) {
+      wrap.appendChild(el("div", "arch-flow-arrow", "↓"));
+    }
+    const row = el("div", "arch-flow-layer");
+    if (layer.band) {
+      const band = el("div", "arch-flow-band");
+      band.appendChild(el("p", "arch-flow-band-title", pickText(layer.band)));
+      const cols = el("div", "arch-flow-cols");
+      for (const node of layer.nodes || []) {
+        cols.appendChild(renderArchNode(node));
+      }
+      band.appendChild(cols);
+      row.appendChild(band);
+    } else {
+      const cols = el("div", "arch-flow-cols");
+      for (const node of layer.nodes || []) {
+        cols.appendChild(renderArchNode(node));
+      }
+      row.appendChild(cols);
+    }
+    wrap.appendChild(row);
+  });
+  parent.appendChild(wrap);
+}
+
+function renderArchNode(node) {
+  const tone = node.tone === "soft" ? " is-soft" : "";
+  const wide = node.wide ? " is-wide" : "";
+  const card = el("div", `arch-flow-node${tone}${wide}`);
+  const title = pickText(node.title) || String(node.title || "");
+  const body = pickText(node.body) || (typeof node.body === "string" ? node.body : "");
+  if (title) card.appendChild(el("p", "arch-flow-node-title", title));
+  if (body) card.appendChild(el("p", "arch-flow-node-body", body));
+  return card;
 }
 
 function getBulletList(sec) {
@@ -457,7 +529,11 @@ function renderItemPage(item, ctx) {
     if (!sectionHasContent(sec) && key !== "system") continue;
     const hasSystemBits =
       key === "system" &&
-      (sectionHasContent(sec) || item.links?.repo || getScreenshotList(sec).length);
+      (sectionHasContent(sec) ||
+        item.links?.repo ||
+        item.links?.site ||
+        getScreenshotList(sec).length ||
+        hasDiagram(sec));
     if (key === "system" && !hasSystemBits) continue;
 
     const block = el("section", `work-section work-section-${key}`);
@@ -468,9 +544,18 @@ function renderItemPage(item, ctx) {
       const gallery = renderScreenshotGallery(sec || {});
       if (gallery) block.appendChild(gallery);
 
+      appendDiagram(block, sec || {});
+
       appendParagraphs(block, t(sec), "work-system-copy");
 
       const links = el("div", "work-system-links");
+      if (item.links?.site) {
+        const a = el("a", "work-demo-link", ui("workOpenDemo"));
+        a.href = item.links.site;
+        a.target = "_blank";
+        a.rel = "noopener";
+        links.appendChild(a);
+      }
       if (item.links?.repo) {
         const a = el("a", "work-demo-link", ui("workRepo"));
         a.href = item.links.repo;

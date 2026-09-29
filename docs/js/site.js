@@ -1,7 +1,7 @@
 export const LANG_KEY = "catalogue-lang";
 export const THEME_KEY = "catalogue-theme";
 export const SUPPORTED = ["zh", "en"];
-export const ASSET_VERSION = "20260915o";
+export const ASSET_VERSION = "20260929e";
 export const UPDATED_AT = "2026-09-15";
 
 export const SITE_NAV = [
